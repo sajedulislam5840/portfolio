@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mir Mohammad Sajedul Islam | AI, Machine Learning & Systems</title>
-  <meta name="description" content="Portfolio of Mir Mohammad Sajedul Islam: Computer Science and Engineering student at BRAC University specializing in Machine Learning, Reproducible Pipelines, and AI Systems.">
+  <meta name="description" content="Portfolio of Mir Mohammad Sajedul Islam — Computer Science and Engineering student at BRAC University specializing in AI, Machine Learning Systems, and Full-Stack Engineering.">
   <meta name="author" content="Mir Mohammad Sajedul Islam">
   <meta property="og:title" content="Mir Mohammad Sajedul Islam | Portfolio">
-  <meta property="og:description" content="Machine learning workflows, diagnostic evaluation, and AI systems.">
+  <meta property="og:description" content="Full-stack AI systems, machine learning pipelines, and relational database architecture.">
   <meta property="og:type" content="website">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,14 +43,14 @@
     a { color: var(--accent); text-decoration: none; transition: all 0.2s ease; }
     a:hover { opacity: 0.85; text-decoration: underline; }
 
-    .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
 
     /* Sticky Navigation */
     header.nav {
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(11, 15, 23, 0.85);
+      background: rgba(11, 15, 23, 0.88);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--surface-border);
     }
@@ -70,7 +70,7 @@
     .brand span { color: var(--accent); }
     .nav ul {
       display: flex;
-      gap: 24px;
+      gap: 22px;
       list-style: none;
       font-size: 14px;
       font-weight: 500;
@@ -80,13 +80,13 @@
 
     /* Hero Section */
     .hero {
-      padding: 96px 0 64px;
+      padding: 88px 0 56px;
       border-bottom: 1px solid var(--surface-border);
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 160px;
-      gap: 48px;
+      grid-template-columns: 1fr 150px;
+      gap: 40px;
       align-items: center;
     }
     .status-badge {
@@ -96,11 +96,11 @@
       background: var(--accent-glow);
       border: 1px solid rgba(56, 189, 248, 0.3);
       color: var(--accent);
-      padding: 4px 12px;
+      padding: 5px 14px;
       border-radius: 9999px;
       font-size: 12.5px;
       font-family: var(--font-mono);
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
     .status-dot {
       width: 7px;
@@ -110,17 +110,17 @@
       box-shadow: 0 0 8px var(--accent);
     }
     h1 {
-      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-size: clamp(2.1rem, 4.8vw, 3.1rem);
       font-weight: 700;
       line-height: 1.15;
       letter-spacing: -0.03em;
       margin-bottom: 16px;
     }
     .tagline {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: var(--text-muted);
-      max-width: 620px;
-      margin-bottom: 28px;
+      max-width: 680px;
+      margin-bottom: 26px;
       line-height: 1.6;
     }
     .cta-group {
@@ -134,7 +134,7 @@
       gap: 8px;
       padding: 9px 18px;
       border-radius: 6px;
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 500;
       border: 1px solid var(--surface-border);
       background: var(--surface);
@@ -152,13 +152,13 @@
       transform: translateY(-1px);
     }
     .btn.primary:hover {
-      box-shadow: 0 4px 16px rgba(56, 189, 248, 0.3);
+      box-shadow: 0 4px 16px rgba(56, 189, 248, 0.35);
     }
 
     .avatar-wrapper {
       position: relative;
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
     }
     .avatar-box {
       width: 100%;
@@ -178,14 +178,14 @@
 
     /* Section Structure */
     section {
-      padding: 64px 0;
+      padding: 60px 0;
       border-bottom: 1px solid var(--surface-border);
     }
     .section-header {
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.45rem;
       font-weight: 600;
       letter-spacing: -0.02em;
       display: flex;
@@ -199,11 +199,11 @@
       font-size: 1.1rem;
     }
 
-    /* Project Cards */
+    /* Cards Grid */
     .card-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
     }
     .card {
       background: var(--surface);
@@ -234,9 +234,10 @@
       color: var(--accent);
     }
     .card-body {
-      font-size: 15px;
+      font-size: 14.5px;
       color: var(--text-muted);
       margin-bottom: 16px;
+      line-height: 1.6;
     }
     .metrics-strip {
       display: flex;
@@ -248,19 +249,14 @@
       border-radius: 6px;
       margin-bottom: 16px;
       font-family: var(--font-mono);
-      font-size: 13px;
+      font-size: 12.5px;
     }
-    .metric-item span {
-      color: var(--text-muted);
-    }
-    .metric-item strong {
-      color: var(--accent);
-      font-weight: 600;
-    }
+    .metric-item span { color: var(--text-muted); }
+    .metric-item strong { color: var(--accent); font-weight: 600; }
     .card-links {
       display: flex;
       gap: 16px;
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 500;
     }
 
@@ -275,7 +271,7 @@
       background: var(--badge-bg);
       color: var(--badge-text);
       font-family: var(--font-mono);
-      font-size: 12.5px;
+      font-size: 12px;
       padding: 4px 10px;
       border-radius: 6px;
       border: 1px solid rgba(56, 189, 248, 0.15);
@@ -284,8 +280,8 @@
     /* Skills Grid */
     .skills-layout {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
     .skill-category {
       background: var(--surface);
@@ -295,23 +291,23 @@
     }
     .skill-category h3 {
       font-family: var(--font-mono);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--text-muted);
       margin-bottom: 14px;
     }
 
-    /* Timeline / Education */
+    /* Timeline & Experience */
     .timeline-item {
       display: grid;
-      grid-template-columns: 180px 1fr;
+      grid-template-columns: 190px 1fr;
       gap: 24px;
       margin-bottom: 24px;
     }
     .timeline-date {
       font-family: var(--font-mono);
-      font-size: 13.5px;
+      font-size: 13px;
       color: var(--text-muted);
     }
     .timeline-content h3 {
@@ -321,19 +317,38 @@
     }
     .timeline-content .inst {
       color: var(--accent);
-      font-size: 14.5px;
-      margin-bottom: 6px;
+      font-size: 14px;
+      margin-bottom: 8px;
     }
     .timeline-content p {
-      font-size: 14.5px;
+      font-size: 14px;
       color: var(--text-muted);
+      line-height: 1.6;
     }
+
+    /* Certifications */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+    }
+    .cert-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cert-title { font-size: 14.5px; font-weight: 600; margin-bottom: 2px; }
+    .cert-issuer { font-size: 13px; color: var(--text-muted); }
 
     /* Footer */
     footer {
       padding: 40px 0;
       color: var(--text-muted);
-      font-size: 13.5px;
+      font-size: 13px;
       font-family: var(--font-mono);
     }
     footer .wrap {
@@ -344,16 +359,16 @@
     }
 
     @media (max-width: 768px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
-      .avatar-wrapper { order: -1; width: 100px; height: 100px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+      .avatar-wrapper { order: -1; width: 90px; height: 90px; }
       .timeline-item { grid-template-columns: 1fr; gap: 6px; }
-      .nav ul { gap: 16px; font-size: 13px; }
+      .nav ul { gap: 14px; font-size: 13px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Sticky Navbar -->
+  <!-- Navigation -->
   <header class="nav">
     <div class="wrap">
       <a class="brand" href="#top"><span>$</span> sajedul.islam</a>
@@ -361,8 +376,8 @@
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -381,13 +396,13 @@
           </div>
           <h1>Mir Mohammad Sajedul Islam</h1>
           <p class="tagline">
-            Computer Science student designing reproducible machine learning pipelines, balanced predictive systems, and high-performance algorithms.
+            Computer Science student focusing on applied machine learning pipelines, relational database architecture, and production full-stack systems.
           </p>
           <div class="cta-group">
-            <a class="btn primary" href="https://github.com/sajedulislam5840" target="_blank" rel="noopener">GitHub</a>
-            <a class="btn" href="https://www.linkedin.com/in/sajedul-islam-data/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn" href="#projects">View Projects</a>
-            <a class="btn" href="#contact">Get in Touch</a>
+            <a class="btn primary" href="https://github.com/sajedulislam5840" target="_blank" rel="noopener">GitHub Profile</a>
+            <a class="btn" href="https://www.linkedin.com/in/sajedul-islam-data" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="mailto:mohammad.sajedul.islam@g.bracu.ac.bd">Email</a>
+            <a class="btn" href="#projects">Explore Projects ↓</a>
           </div>
         </div>
 
@@ -402,44 +417,109 @@
       <div class="section-header">
         <h2>About</h2>
       </div>
-      <p style="font-size: 16px; color: var(--text-muted); line-height: 1.7; max-width: 800px;">
-        I am a Computer Science & Engineering undergraduate at BRAC University focusing on machine learning, data engineering, and applied artificial intelligence. I specialize in building diagnostics-driven ML pipelines that handle severe real-world constraints—such as class imbalance, high data skew, and non-trivial cross-validation stability—prioritizing pragmatic evaluation metrics over superficial accuracy.
+      <p style="font-size: 15.5px; color: var(--text-muted); line-height: 1.7; max-width: 820px;">
+        I study Computer Science and Engineering at BRAC University in Dhaka, Bangladesh. My work bridges disciplined data engineering with machine learning operations: handling real-world dataset skew, building class-weighted predictive pipelines, designing fully normalized transactional schemas (3NF), and deploying scalable full-stack applications.
       </p>
     </section>
 
     <!-- Projects -->
     <section id="projects">
       <div class="section-header">
-        <h2>Featured Systems & Projects</h2>
+        <h2>Featured Systems & Engineering Projects</h2>
       </div>
       <div class="card-grid">
 
-        <!-- Project 1: Career Switch Prediction System -->
+        <!-- Project 1: AZS-The-Catalyst -->
+        <article class="card">
+          <div class="card-head">
+            <h3 class="card-title">AZS: The Catalyst — AI EdTech Ecosystem</h3>
+            <span class="card-meta">Next.js · FastAPI · Python · Neon PostgreSQL</span>
+          </div>
+          <p class="card-body">
+            A production-ready EdTech platform unifying structured curriculum sequencing, role-based batch management, and automated subscription tracking. Features an integrated conversational AI tutoring assistant designed to resolve complex scientific queries and mathematical concepts for students in real time. Deployed across Vercel and Render.
+          </p>
+          <div class="metrics-strip">
+            <div class="metric-item"><span>Stack:</span> <strong>FastAPI + Next.js</strong></div>
+            <div class="metric-item"><span>Database:</span> <strong>Neon PostgreSQL (SQLAlchemy)</strong></div>
+            <div class="metric-item"><span>Deployment:</span> <strong>Vercel & Render</strong></div>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/sajedulislam5840/AZS-The-Catalyst" target="_blank" rel="noopener">Repository & Architecture →</a>
+          </div>
+        </article>
+
+        <!-- Project 2: CSE422 -->
         <article class="card">
           <div class="card-head">
             <h3 class="card-title">Career Switch Prediction System</h3>
-            <span class="card-meta">Scikit-Learn · Pandas · Stratified 5-Fold</span>
+            <span class="card-meta">Scikit-Learn · Stratified 5-Fold · Imbalanced Learning</span>
           </div>
           <p class="card-body">
-            An end-to-end classification system benchmarked on 5,000 real candidate profiles to predict tech career-switch intent. Formulated to combat extreme class imbalance (74.8% stay vs. 25.2% switch) through class-weighted loss penalties, comparing Logistic Regression, KNN, and an MLP Neural Network against an unsupervised K-Means baseline.
+            An end-to-end machine learning classification pipeline trained on 5,000 professional candidate profiles. Mitigates severe target skew (74.8% stay vs. 25.2% switch) through class-weighted loss parameters, benchmarking Logistic Regression, K-Nearest Neighbors, and an MLP Neural Network against an unsupervised K-Means segmentation baseline.
           </p>
-
           <div class="metrics-strip">
-            <div class="metric-item"><span>Benchmark F1:</span> <strong>0.519</strong></div>
+            <div class="metric-item"><span>Balanced F1:</span> <strong>0.519</strong></div>
             <div class="metric-item"><span>ROC-AUC:</span> <strong>0.716</strong></div>
-            <div class="metric-item"><span>Switch Recall:</span> <strong>0.627</strong></div>
+            <div class="metric-item"><span>Target Recall:</span> <strong>0.627</strong></div>
             <div class="metric-item"><span>Validation:</span> <strong>Stratified 5-Fold CV</strong></div>
           </div>
-
           <div class="card-links">
-            <a href="https://github.com/sajedulislam5840/CSE422" target="_blank" rel="noopener">Repository & Source Code →</a>
+            <a href="https://github.com/sajedulislam5840/CSE422" target="_blank" rel="noopener">Repository & Benchmark Notebook →</a>
+          </div>
+        </article>
+
+        <!-- Project 3: CSE370 -->
+        <article class="card">
+          <div class="card-head">
+            <h3 class="card-title">SparkEnergies — Utility Billing & Ledger Platform</h3>
+            <span class="card-meta">PHP · MySQL · 3NF Schema · Chart.js</span>
+          </div>
+          <p class="card-body">
+            A centralized utility billing and power distribution portal designed to eliminate legacy allocation errors. Built on an ER/EER model normalized to Third Normal Form (3NF) to eliminate transitive dependencies and data duplication. Features double-entry transactional safety for account wallets and dynamic 6-month consumption analytics via Chart.js.
+          </p>
+          <div class="metrics-strip">
+            <div class="metric-item"><span>Architecture:</span> <strong>3NF Normalized Schema</strong></div>
+            <div class="metric-item"><span>Database:</span> <strong>MySQL Relational Store</strong></div>
+            <div class="metric-item"><span>Analytics:</span> <strong>Chart.js Longitudinal Trends</strong></div>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/sajedulislam5840/CSE370" target="_blank" rel="noopener">Repository & Database Schemas →</a>
           </div>
         </article>
 
       </div>
     </section>
 
-    <!-- Technical Skills -->
+    <!-- Experience & Education -->
+    <section id="experience">
+      <div class="section-header">
+        <h2>Experience & Education</h2>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">Industry Experience</div>
+        <div class="timeline-content">
+          <h3>Data Preparation Specialist Intern</h3>
+          <div class="inst">DataSynthis</div>
+          <p>
+            Focused on high-throughput data validation, schema auditing, preprocessing operations, and structured pipeline hygiene to ensure high-fidelity inputs for downstream predictive models.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">Undergraduate Degree</div>
+        <div class="timeline-content">
+          <h3>BSc in Computer Science and Engineering</h3>
+          <div class="inst">BRAC University, Dhaka, Bangladesh</div>
+          <p>
+            Core coursework: Artificial Intelligence, Operating Systems, Computer Architecture & Assembly (RISC-V), Numerical Methods, Database Systems, and Digital Logic Design.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
     <section id="skills">
       <div class="section-header">
         <h2>Technical Stack</h2>
@@ -452,12 +532,13 @@
             <li>Java</li>
             <li>C++</li>
             <li>SQL</li>
-            <li>Assembly (RISC-V)</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
           </ul>
         </div>
 
         <div class="skill-category">
-          <h3>ML & Data Science</h3>
+          <h3>Data & Machine Learning</h3>
           <ul class="tag-list">
             <li>Scikit-Learn</li>
             <li>Pandas</li>
@@ -469,30 +550,38 @@
         </div>
 
         <div class="skill-category">
-          <h3>Core Competencies</h3>
+          <h3>Backend & Architecture</h3>
           <ul class="tag-list">
-            <li>Data Structures & Algorithms</li>
-            <li>Operating Systems</li>
-            <li>Digital Logic Design</li>
-            <li>Exploratory Data Analysis</li>
+            <li>FastAPI</li>
+            <li>Next.js / React</li>
+            <li>PostgreSQL</li>
+            <li>MySQL</li>
+            <li>3NF Modeling</li>
+            <li>Git / GitHub</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Education -->
-    <section id="education">
+    <!-- Verified Credentials -->
+    <section id="certifications">
       <div class="section-header">
-        <h2>Education</h2>
+        <h2>Verified Certifications</h2>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-date">Undergraduate</div>
-        <div class="timeline-content">
-          <h3>BSc in Computer Science and Engineering</h3>
-          <div class="inst">BRAC University, Dhaka, Bangladesh</div>
-          <p>
-            Key Coursework: Artificial Intelligence, Operating Systems, Computer Architecture, Data Structures & Algorithms, Numerical Methods, Digital Logic Design.
-          </p>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div>
+            <div class="cert-title">Python Essentials 1</div>
+            <div class="cert-issuer">Cisco Networking Academy / OpenEDG</div>
+          </div>
+          <a class="btn" href="https://www.credly.com/earner/earned/badge/93cd27e3-c012-47b7-a723-21ad66551fd5" target="_blank" rel="noopener">Verify ↗</a>
+        </div>
+        <div class="cert-card">
+          <div>
+            <div class="cert-title">Introduction to Data Science</div>
+            <div class="cert-issuer">Cisco Networking Academy</div>
+          </div>
+          <a class="btn" href="https://www.credly.com/earner/earned/badge/84fa8f17-93a3-4b54-b1fd-830dcb2f59ac" target="_blank" rel="noopener">Verify ↗</a>
         </div>
       </div>
     </section>
@@ -503,10 +592,11 @@
         <h2>Connect</h2>
       </div>
       <p style="color: var(--text-muted); margin-bottom: 20px;">
-        Interested in research collaboration, engineering roles, or machine learning pipelines?
+        Open to discussions regarding applied artificial intelligence, machine learning engineering, and academic research collaborations.
       </p>
       <div class="cta-group">
-        <a class="btn primary" href="https://www.linkedin.com/in/sajedul-islam-data/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <a class="btn primary" href="https://www.linkedin.com/in/sajedul-islam-data" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <a class="btn" href="mailto:mohammad.sajedul.islam@g.bracu.ac.bd">Send Email</a>
         <a class="btn" href="https://github.com/sajedulislam5840" target="_blank" rel="noopener">Follow on GitHub</a>
       </div>
     </section>
@@ -516,7 +606,7 @@
   <footer>
     <div class="wrap">
       <span>Mir Mohammad Sajedul Islam</span>
-      <span>Hosted via GitHub Pages</span>
+      <span>Hosted on GitHub Pages</span>
     </div>
   </footer>
 
