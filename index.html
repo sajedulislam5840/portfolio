@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mir Mohammad Sajedul Islam | AI, Machine Learning & Systems</title>
-  <meta name="description" content="Portfolio of Mir Mohammad Sajedul Islam — CSE student at BRAC University specializing in AI, ML Systems, and Full-Stack Engineering.">
+  <meta name="description" content="Portfolio of Mir Mohammad Sajedul Islam — CSE student at BRAC University specializing in AI, ML Systems, Data Engineering, and Full-Stack Architecture.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -925,6 +925,10 @@
       background: linear-gradient(180deg, var(--accent-emerald), var(--accent-cyan));
       opacity: 0.3;
     }
+    .project-card:nth-child(4) .project-accent-bar {
+      background: linear-gradient(180deg, var(--accent-orange), var(--accent-yellow));
+      opacity: 0.3;
+    }
     .project-card:hover .project-accent-bar { opacity: 1; }
     .project-card:hover {
       border-color: var(--border-hover);
@@ -1732,14 +1736,14 @@
       </div>
       <div class="about-grid">
         <div class="about-text reveal-left">
-          <p>I study <strong>Computer Science and Engineering</strong> at <strong>BRAC University</strong> in Dhaka, Bangladesh. My work bridges disciplined data engineering with machine learning operations.</p>
-          <p>I handle <strong>real-world dataset skew</strong>, build <strong>class-weighted predictive pipelines</strong>, design <strong>fully normalized transactional schemas (3NF)</strong>, and deploy <strong>scalable full-stack applications</strong> across modern cloud infrastructure.</p>
-          <p>My focus is on building systems that don't just work in notebooks — they work in <strong>production</strong>.</p>
+          <p>I am a <strong>Computer Science and Engineering</strong> student at <strong>BRAC University</strong> and a former Data Preparation Specialist Intern at <strong>DataSynthis</strong>.</p>
+          <p>Driven by a passion for building reliable analytics infrastructure, I specialize in <strong>Data Engineering</strong>, <strong>ETL Architectures</strong>, and <strong>Business Intelligence</strong>. I bridge the gap between messy, high-volume raw transactional records and high-impact executive insights—designing automated Medallion pipelines (Raw → Silver → Gold) that empower data-backed decision-making.</p>
+          <p>Beyond data engineering, I build production-ready full-stack applications leveraging modern stacks (Next.js, FastAPI, PostgreSQL) to solve real-world problems.</p>
         </div>
         <div class="about-right reveal-right">
           <div class="about-stats">
             <div class="stat-card">
-              <div class="stat-number" data-target="3">0</div>
+              <div class="stat-number" data-target="4">0</div>
               <div class="stat-label">Production Projects</div>
             </div>
             <div class="stat-card">
@@ -1836,6 +1840,37 @@
             <div class="project-header">
               <div>
                 <div class="project-number"><span class="pn-line"></span> PROJECT 02</div>
+                <h3 class="project-name">Retail Intelligence Engine</h3>
+              </div>
+              <span class="project-type">Data Engineering</span>
+            </div>
+            <p class="project-desc">An enterprise-grade multi-source ETL analytics pipeline. Transforms raw e-commerce and offline retail transaction logs into a Medallion-structured (Raw → Silver → Gold) data architecture, powering automated executive business intelligence dashboards.</p>
+            <div class="project-tech-visual">
+              <div class="tech-pill"><div class="dot cyan"></div> Python</div>
+              <div class="tech-pill"><div class="dot purple"></div> Pandas</div>
+              <div class="tech-pill"><div class="dot emerald"></div> ETL Pipeline</div>
+              <div class="tech-pill"><div class="dot orange"></div> Matplotlib</div>
+            </div>
+            <div class="project-metrics">
+              <div class="metric-badge"><span class="label">Arch:</span><span class="value">Medallion Structure</span></div>
+              <div class="metric-badge"><span class="label">Engine:</span><span class="value">Pandas</span></div>
+              <div class="metric-badge"><span class="label">Output:</span><span class="value">Exec Dashboards</span></div>
+            </div>
+            <div class="project-footer">
+              <a class="project-link" href="https://github.com/sajedulislam5840/amazon-sales-etl-pipeline" target="_blank" rel="noopener">
+                View Repository
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" style="transition-delay: 0.3s;">
+          <div class="project-accent-bar"></div>
+          <div class="project-inner">
+            <div class="project-header">
+              <div>
+                <div class="project-number"><span class="pn-line"></span> PROJECT 03</div>
                 <h3 class="project-name">Career Switch Prediction System</h3>
               </div>
               <span class="project-type">Machine Learning</span>
@@ -1862,12 +1897,12 @@
           </div>
         </article>
 
-        <article class="project-card reveal" style="transition-delay: 0.3s;">
+        <article class="project-card reveal" style="transition-delay: 0.4s;">
           <div class="project-accent-bar"></div>
           <div class="project-inner">
             <div class="project-header">
               <div>
-                <div class="project-number"><span class="pn-line"></span> PROJECT 03</div>
+                <div class="project-number"><span class="pn-line"></span> PROJECT 04</div>
                 <h3 class="project-name">SparkEnergies — Utility Billing Platform</h3>
               </div>
               <span class="project-type">Database Systems</span>
@@ -1911,12 +1946,12 @@
             <div class="timeline-period">Industry Experience</div>
             <h3 class="timeline-role">Data Preparation Specialist Intern</h3>
             <div class="timeline-org">DataSynthis</div>
-            <p class="timeline-desc">Focused on high-throughput data validation, schema auditing, preprocessing operations, and structured pipeline hygiene to ensure high-fidelity inputs for downstream predictive models.</p>
+            <p class="timeline-desc">Engineered high-throughput data validation, schema auditing, and Medallion (Raw-Silver-Gold) deduplication pipelines. Ensured zero-loss reporting integrity and transformed raw datasets into clean, analytics-ready engines for downstream BI.</p>
             <div class="timeline-tags">
               <span class="timeline-tag">Data Validation</span>
-              <span class="timeline-tag">Schema Auditing</span>
-              <span class="timeline-tag">Pipeline QA</span>
-              <span class="timeline-tag">Preprocessing</span>
+              <span class="timeline-tag">Schema Normalization</span>
+              <span class="timeline-tag">ETL Pipelines</span>
+              <span class="timeline-tag">Data Engineering</span>
             </div>
           </div>
         </div>
@@ -2298,10 +2333,10 @@
       { type: 'input', text: '$ cat profile.json' },
       { type: 'output', text: '{' },
       { type: 'output', text: '  "name": "Sajedul Islam",' },
-      { type: 'output', text: '  "role": "CSE Student & ML Engineer",' },
+      { type: 'output', text: '  "role": "Data Engineer & Full-Stack Developer",' },
       { type: 'output', text: '  "focus": [' },
+      { type: 'output', text: '    "Data Engineering & ETL",' },
       { type: 'output', text: '    "Applied Machine Learning",' },
-      { type: 'output', text: '    "Database Architecture",' },
       { type: 'output', text: '    "Full-Stack Systems"' },
       { type: 'output', text: '  ],' },
       { type: 'output', text: '  "status": "Building & Learning 🚀"' },
