@@ -9,7 +9,7 @@
   description?: string;
 }
 
-export const EDUCATION_LIST: EducationShowcaseListItemProps[] = [
+const EDUCATION_DATA: EducationShowcaseListItemProps[] = [
   {
     title: "BSc in Computer Science and Engineering",
     organisation: {
@@ -22,3 +22,8 @@ export const EDUCATION_LIST: EducationShowcaseListItemProps[] = [
       "Core coursework in Artificial Intelligence, Operating Systems, Computer Architecture (RISC-V), Numerical Methods, Database Systems, and Digital Logic Design.",
   },
 ];
+
+export const EDUCATION = EDUCATION_DATA;
+export const EDUCATION_LIST = EDUCATION_DATA;
+export const educations = EDUCATION_DATA;
+export default EDUCATION_DATA;
