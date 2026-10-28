@@ -7,7 +7,7 @@
   liveWebsiteHref?: string;
 }
 
-export const PROJECT_SHOWCASE_LIST: ProjectProps[] = [
+const PROJECT_LIST: ProjectProps[] = [
   {
     name: "AZS: The Catalyst",
     favicon: "/favicon.ico",
@@ -22,7 +22,7 @@ export const PROJECT_SHOWCASE_LIST: ProjectProps[] = [
     favicon: "/favicon.ico",
     imageUrl: "/static/images/hero.webp",
     description:
-      "Enterprise multi-source ETL analytics pipeline transforming retail logs into Medallion (Raw → Silver → Gold) architecture.",
+      "Enterprise multi-source ETL analytics pipeline transforming retail logs into Medallion (Raw to Silver to Gold) architecture.",
     sourceCodeHref: "https://github.com/sajedulislam5840",
   },
   {
@@ -42,3 +42,9 @@ export const PROJECT_SHOWCASE_LIST: ProjectProps[] = [
     sourceCodeHref: "https://github.com/sajedulislam5840",
   },
 ];
+
+export const PROJECT_SHOWCASE_LIST = PROJECT_LIST;
+export const PROJECTS_CARD_LIST = PROJECT_LIST;
+export const projects = PROJECT_LIST;
+export const PROJECTS_DATA = PROJECT_LIST;
+export default PROJECT_LIST;
