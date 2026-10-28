@@ -11,7 +11,10 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   {
     name: "RISC-V Edge AI Acceleration",
     favicon: "",
-    imageUrl: [],
+    imageUrl: [
+      "/images/projects/riscv-architecture.png",
+      "/images/projects/riscv-benchmark.png",
+    ],
     description:
       "Hardware-software co-design research exploring custom RISC-V instruction extensions and quantized ML inference pipelines optimized for resource-constrained edge systems.",
     sourceCodeHref: "https://github.com/sajedulislam5840/riscv-edge-ai",
@@ -63,8 +66,8 @@ export const PROJECT_SHOWCASE = [
     href: "/projects",
     tags: ["RISC-V", "Edge AI", "Computer Architecture", "Hardware-Software Co-Design"],
     image: {
-      LIGHT: "",
-      DARK: "",
+      LIGHT: "/images/projects/riscv-architecture.png",
+      DARK: "/images/projects/riscv-architecture.png",
     },
   },
   {
