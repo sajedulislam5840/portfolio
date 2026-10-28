@@ -5,7 +5,7 @@
   description: "Specializing in Data Engineering, Machine Learning, and Full-Stack Systems.",
   language: "en-us",
   theme: "system",
-  siteUrl: "https://github.com/sajedulislam5840/portfolio",
+  siteUrl: "https://sajedul-islam-portfolio.vercel.app",
   siteRepo: "https://github.com/sajedulislam5840/portfolio",
   siteLogo: "/static/images/logo.png",
   image: "/images/heroProfile.png",
