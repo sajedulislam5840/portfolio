@@ -25,7 +25,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   {
     name: "Retail Intelligence Engine",
     favicon: "",
-    imageUrl: ["/images/projects/catalyst-hero.png"],
+    imageUrl: [],
     description:
       "Enterprise multi-source ETL analytics pipeline transforming retail logs into Medallion (Raw to Silver to Gold) architecture.",
     sourceCodeHref: "https://github.com/sajedulislam5840",
@@ -33,7 +33,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   {
     name: "Career Switch Prediction",
     favicon: "",
-    imageUrl: ["/images/projects/catalyst-dashboard.png"],
+    imageUrl: [],
     description:
       "Classification pipeline tackling class imbalance with class-weighted loss, evaluated on 5,000 profiles via Stratified 5-Fold CV.",
     sourceCodeHref: "https://github.com/sajedulislam5840",
@@ -41,7 +41,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   {
     name: "SparkEnergies Billing",
     favicon: "",
-    imageUrl: ["/images/projects/catalyst-signin.png"],
+    imageUrl: [],
     description:
       "Utility billing engine on a 3NF normalized schema with double-entry safety for prepaid balances and 6-month usage analytics.",
     sourceCodeHref: "https://github.com/sajedulislam5840",
@@ -65,8 +65,8 @@ export const PROJECT_SHOWCASE = [
     href: "/projects",
     tags: ["ETL", "Python", "SQL", "Medallion"],
     image: {
-      LIGHT: "/images/projects/catalyst-dashboard.png",
-      DARK: "/images/projects/catalyst-dashboard.png",
+      LIGHT: "",
+      DARK: "",
     },
   },
   {
@@ -75,8 +75,8 @@ export const PROJECT_SHOWCASE = [
     href: "/projects",
     tags: ["Machine Learning", "Scikit-Learn", "Python"],
     image: {
-      LIGHT: "/images/projects/catalyst-signin.png",
-      DARK: "/images/projects/catalyst-signin.png",
+      LIGHT: "",
+      DARK: "",
     },
   },
   {
@@ -85,8 +85,8 @@ export const PROJECT_SHOWCASE = [
     href: "/projects",
     tags: ["Database", "SQL", "3NF Schema"],
     image: {
-      LIGHT: "/images/projects/catalyst-register.png",
-      DARK: "/images/projects/catalyst-register.png",
+      LIGHT: "",
+      DARK: "",
     },
   },
 ];
