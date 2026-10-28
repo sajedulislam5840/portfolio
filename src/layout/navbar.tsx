@@ -1,97 +1,48 @@
-import { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-
-import { AnimatePresence, motion } from "framer-motion";
-
-import MenuLogo from "@/components/utility/menu-button";
+﻿import AnimatedLogo from "@/animation/animated-logo";
 import ThemeSwitch from "@/components/utility/theme-switch";
-import AnimatedLogo from "@/animation/animated-logo";
-import MobileMenu from "@/components/utility/mobile-menu";
-import { classNames } from "@/utility/classNames";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-export type NavbarRoute = {
-  title: string;
-  href: string;
-};
+const NAV_LINKS = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Projects", href: "/projects" },
+];
 
-export type NavbarRoutes = NavbarRoute[];
-
-export interface NavbarProps {
-  routes: NavbarRoutes;
-}
-
-export default function Navbar(props: NavbarProps) {
-  const pathName = usePathname();
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const toggleModal = () => {
-    setIsModalOpen((prev) => !prev);
-  };
+export default function Navbar() {
+  const router = useRouter();
 
   return (
-    <header className="sticky top-0 z-50 mt-2 px-6 py-8 sm:mt-8 sm:px-14 md:px-20">
-      <div className="mx-auto flex items-center justify-between lg:max-w-7xl">
-        <Link
-          href="/"
-          className="drop-shadow-teralight flex items-center justify-center"
-          aria-label="Return to home page"
-        >
-          <div className="relative h-12 w-12 sm:h-14 sm:w-14">
-            <AnimatedLogo />
-          </div>
-        </Link>
-        <nav className="hidden items-center gap-2 rounded-full px-2 py-2 shadow-md ring-1 ring-zinc-200 backdrop-blur-md dark:ring-accent/50 md:flex">
-          <ul className="flex gap-2 text-sm font-medium">
-            {props.routes.map((_link, index) => {
+    <header className="sticky top-0 z-50 w-full border-b border-zinc-200/60 bg-white/80 backdrop-blur-md dark:border-zinc-800/60 dark:bg-zinc-950/80">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 sm:px-12 md:px-16">
+        {/* Fixed Top-Left Brand Logo */}
+        <div className="flex items-center">
+          <AnimatedLogo />
+        </div>
+
+        {/* Right Navigation & Theme Switch */}
+        <nav className="flex items-center gap-2 sm:gap-4">
+          <div className="flex items-center gap-1 rounded-full border border-zinc-200 bg-zinc-100/70 p-1 dark:border-zinc-800 dark:bg-zinc-900/70">
+            {NAV_LINKS.map((link) => {
+              const isActive = router.pathname === link.href;
               return (
-                <li
-                  key={index}
-                  className="my-3 transition-transform duration-100 hover:scale-[1.1]"
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`rounded-full px-3.5 py-1 text-xs font-semibold transition-all sm:text-sm ${
+                    isActive
+                      ? "bg-teal-600 text-white shadow-sm"
+                      : "text-zinc-600 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-100"
+                  }`}
                 >
-                  <Link
-                    href={_link.href}
-                    className={classNames(
-                      pathName === _link.href
-                        ? "font-semibold text-background dark:hover:text-foreground"
-                        : "text-foreground",
-                      "group relative mx-3 rounded-full px-3 py-2 transition-colors duration-200",
-                    )}
-                  >
-                    {_link.href === pathName && (
-                      <motion.span
-                        layoutId="tab-pill"
-                        animate={{
-                          transition: {
-                            x: {
-                              type: "spring",
-                              stiffness: 300,
-                              damping: 30,
-                            },
-                          },
-                        }}
-                        className="absolute inset-0 -z-10 rounded-full bg-accent group-hover:bg-accent/80"
-                      ></motion.span>
-                    )}
-                    {_link.title}
-                  </Link>
-                </li>
+                  {link.name}
+                </Link>
               );
             })}
-          </ul>
+          </div>
           <ThemeSwitch />
         </nav>
-        <AnimatePresence>
-          <MenuLogo open={isModalOpen} toggle={toggleModal} />
-        </AnimatePresence>
       </div>
-
-      <MobileMenu
-        routes={props.routes}
-        openMenu={isModalOpen}
-        setOpenMenu={setIsModalOpen}
-      />
     </header>
   );
 }
