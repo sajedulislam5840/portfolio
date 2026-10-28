@@ -18,19 +18,12 @@ export default function AboutHero() {
         </FadeUp>
         <FadeUp duration={0.5} delay={0.4}>
           <p className="mt-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 sm:text-base">
-            I am a Computer Science and Engineering undergraduate at BRAC
-            University and a former Data Preparation Specialist Intern at
-            DataSynthis. I specialize in building end-to-end data pipelines and
-            enterprise web platforms.
+            I am a Computer Science and Engineering undergraduate at BRAC University and a former Data Preparation Specialist Intern at DataSynthis. I specialize in building end-to-end data pipelines and enterprise web platforms.
           </p>
         </FadeUp>
         <FadeUp duration={0.5} delay={0.6}>
           <p className="mt-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 sm:text-base">
-            Whether it&apos;s architecting a multi-tier Medallion ETL framework
-            (Raw → Silver → Gold) for transactional intelligence or deploying
-            modern full-stack systems using Next.js and FastAPI, I prioritize
-            clean architectural decoupling, performance, and normalized database
-            schemas.
+            Whether it&apos;s architecting a multi-tier Medallion ETL framework (Raw → Silver → Gold) for transactional intelligence or deploying modern full-stack systems using Next.js and FastAPI, I prioritize clean architectural decoupling, performance, and normalized database schemas.
           </p>
         </FadeUp>
       </div>
@@ -38,7 +31,7 @@ export default function AboutHero() {
         <FadeRight duration={0.5} delay={0.3}>
           <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-accent shadow-xl sm:h-80 sm:w-80">
             <Image
-              src="/static/images/avatar.webp"
+              src="/images/heroProfile.png"
               alt="Mir Mohammad Sajedul Islam"
               fill
               className="object-cover"
