@@ -9,6 +9,14 @@
 
 export const PROJECTS_CARD: ProjectCardProps[] = [
   {
+    name: "RISC-V Edge AI Acceleration",
+    favicon: "",
+    imageUrl: [],
+    description:
+      "Hardware-software co-design research exploring custom RISC-V instruction extensions and quantized ML inference pipelines optimized for resource-constrained edge systems.",
+    sourceCodeHref: "https://github.com/sajedulislam5840/riscv-edge-ai",
+  },
+  {
     name: "AZS: The Catalyst",
     favicon: "",
     imageUrl: [
@@ -51,6 +59,16 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
 export const PROJECT_SHOWCASE = [
   {
     index: 0,
+    title: "RISC-V Edge AI Acceleration",
+    href: "/projects",
+    tags: ["RISC-V", "Edge AI", "Computer Architecture", "Hardware-Software Co-Design"],
+    image: {
+      LIGHT: "",
+      DARK: "",
+    },
+  },
+  {
+    index: 1,
     title: "AZS: The Catalyst",
     href: "/projects",
     tags: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
@@ -60,7 +78,7 @@ export const PROJECT_SHOWCASE = [
     },
   },
   {
-    index: 1,
+    index: 2,
     title: "Retail Intelligence Engine",
     href: "/projects",
     tags: ["ETL", "Python", "SQL", "Medallion"],
@@ -70,20 +88,10 @@ export const PROJECT_SHOWCASE = [
     },
   },
   {
-    index: 2,
+    index: 3,
     title: "Career Switch Prediction",
     href: "/projects",
     tags: ["Machine Learning", "Scikit-Learn", "Python"],
-    image: {
-      LIGHT: "",
-      DARK: "",
-    },
-  },
-  {
-    index: 3,
-    title: "SparkEnergies Billing",
-    href: "/projects",
-    tags: ["Database", "SQL", "3NF Schema"],
     image: {
       LIGHT: "",
       DARK: "",
