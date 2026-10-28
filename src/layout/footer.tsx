@@ -1,29 +1,75 @@
 ﻿import Link from "next/link";
-import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm text-zinc-500 sm:flex-row sm:px-14 md:px-20 lg:px-32">
-      <p>© {new Date().getFullYear()} Mir Mohammad Sajedul Islam</p>
-      <div className="flex items-center gap-6">
-        <Link
-          href="https://github.com/sajedulislam5840"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="GitHub Profile"
-          className="transition hover:text-accent"
-        >
-          <FiGithub className="h-5 w-5" />
-        </Link>
-        <Link
-          href="https://www.linkedin.com/in/sajedul-islam-data"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="LinkedIn Profile"
-          className="transition hover:text-accent"
-        >
-          <FiLinkedin className="h-5 w-5" />
-        </Link>
+    <footer className="mt-16 border-t border-zinc-200/60 bg-white/50 backdrop-blur-md dark:border-zinc-800/60 dark:bg-zinc-900/50">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-10 sm:flex-row sm:px-14 md:px-20 lg:px-32">
+        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+          © {new Date().getFullYear()} {siteMetadata.author}. All rights reserved.
+        </p>
+
+        <div className="flex items-center gap-5 text-zinc-600 dark:text-zinc-400">
+          {siteMetadata.github && (
+            <Link
+              href={siteMetadata.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="transition hover:text-teal-600 dark:hover:text-teal-400"
+            >
+              <FiGithub className="h-5 w-5" />
+            </Link>
+          )}
+
+          {siteMetadata.linkedin && (
+            <Link
+              href={siteMetadata.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="transition hover:text-teal-600 dark:hover:text-teal-400"
+            >
+              <FiLinkedin className="h-5 w-5" />
+            </Link>
+          )}
+
+          {siteMetadata.facebook && (
+            <Link
+              href={siteMetadata.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="transition hover:text-blue-600 dark:hover:text-blue-400"
+            >
+              <FaFacebook className="h-5 w-5" />
+            </Link>
+          )}
+
+          {siteMetadata.whatsapp && (
+            <Link
+              href={siteMetadata.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              className="transition hover:text-emerald-500 dark:hover:text-emerald-400"
+            >
+              <FaWhatsapp className="h-5 w-5" />
+            </Link>
+          )}
+
+          {siteMetadata.email && (
+            <Link
+              href={`mailto:${siteMetadata.email}`}
+              aria-label="Email"
+              className="transition hover:text-teal-600 dark:hover:text-teal-400"
+            >
+              <FiMail className="h-5 w-5" />
+            </Link>
+          )}
+        </div>
       </div>
     </footer>
   );
