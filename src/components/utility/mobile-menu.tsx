@@ -1,4 +1,4 @@
-import { Dispatch, Fragment, SetStateAction } from "react";
+﻿import { Dispatch, Fragment, SetStateAction } from "react";
 import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";
 
@@ -58,7 +58,7 @@ export default function MobileMenu({
                 ))}
                 <ThemeSwitch setClose={setOpenMenu} />
               </div>
-              <div className="absolute bottom-0 py-6">©2023 Amit Chauhan</div>
+              <div className="absolute bottom-0 py-6">©2023 Mir Mohammad Sajedul Islam</div>
             </Dialog.Panel>
           </Transition.Child>
         </div>
@@ -66,3 +66,4 @@ export default function MobileMenu({
     </Transition>
   );
 }
+

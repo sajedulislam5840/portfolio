@@ -1,6 +1,5 @@
 ﻿import Link from "next/link";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 export default function Footer() {
   return (
@@ -8,7 +7,7 @@ export default function Footer() {
       <p>© {new Date().getFullYear()} Mir Mohammad Sajedul Islam</p>
       <div className="flex items-center gap-6">
         <Link
-          href={siteMetadata.github}
+          href="https://github.com/sajedulislam5840"
           target="_blank"
           rel="noreferrer"
           aria-label="GitHub Profile"
@@ -17,7 +16,7 @@ export default function Footer() {
           <FiGithub className="h-5 w-5" />
         </Link>
         <Link
-          href={siteMetadata.linkedin}
+          href="https://www.linkedin.com/in/sajedul-islam-data"
           target="_blank"
           rel="noreferrer"
           aria-label="LinkedIn Profile"

@@ -1,4 +1,4 @@
-import Head from "next/head";
+﻿import Head from "next/head";
 
 import { NextSeo } from "next-seo";
 
@@ -13,18 +13,18 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Amit Chauhan | Software Developer"
-        description="Explore the professional portfolio of Amit Chauhan, a skilled Software Developer with 2 years of hands-on experience. Discover innovative projects, expertise in modern web technologies, and a passion for creating seamless user experiences."
+        title="Mir Mohammad Sajedul Islam | Software Developer"
+        description="Explore the professional portfolio of Mir Mohammad Sajedul Islam, a skilled Software Developer with 2 years of hands-on experience. Discover innovative projects, expertise in modern web technologies, and a passion for creating seamless user experiences."
         canonical={siteMetadata.siteUrl}
         openGraph={{
           url: siteMetadata.siteUrl,
-          title: "Amit Chauhan - Software Developer",
+          title: "Mir Mohammad Sajedul Islam - Software Developer",
           description:
-            "Dive into the world of web development with Amit Chauhan. Discover a Software Developer with 2 years of expertise, showcasing cutting-edge projects and a commitment to crafting exceptional user interfaces.",
+            "Dive into the world of web development with Mir Mohammad Sajedul Islam. Discover a Software Developer with 2 years of expertise, showcasing cutting-edge projects and a commitment to crafting exceptional user interfaces.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
-              alt: "Amit Chauhan - Portfolio Image",
+              alt: "Mir Mohammad Sajedul Islam - Portfolio Image",
             },
           ],
           siteName: siteMetadata.siteName,
@@ -55,3 +55,4 @@ export default function Home() {
     </>
   );
 }
+
