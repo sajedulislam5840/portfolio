@@ -7,7 +7,7 @@
   theme: "system",
   siteUrl: "https://sajedul-islam-portfolio.vercel.app",
   siteRepo: "https://github.com/sajedulislam5840/portfolio",
-  siteLogo: "/static/images/logo.png",
+  siteLogo: "/favicon.ico",
   image: "/images/heroProfile.png",
   socialBanner: "/static/images/twitter-card.png",
   email: "mohammad.sajedul.islam@g.bracu.ac.bd",
