@@ -1,37 +1,24 @@
-import { type ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
+﻿export interface EducationShowcaseListItemProps {
+  title: string;
+  organisation: {
+    name: string;
+    href: string;
+  };
+  date: string;
+  location: string;
+  description?: string;
+}
 
-export const EDUCATION: ExperienceShowcaseListItemProps[] = [
+export const EDUCATION_LIST: EducationShowcaseListItemProps[] = [
   {
-    title: "Bachelor Of Engineering in Electronics and Telecommunication",
+    title: "BSc in Computer Science and Engineering",
     organisation: {
-      name: "Rizvi College Of Engineering",
-      href: "https://eng.rizvi.edu.in/",
+      name: "BRAC University",
+      href: "https://www.bracu.ac.bd",
     },
-    date: "2019-2023",
-    location: "Bandra, Mumbai",
+    date: "Undergraduate",
+    location: "Dhaka, Bangladesh",
     description:
-      "Relevant courses included Data Structures and Algorithms, Web Design, Cloud Computing, Artificial Neural Network and Database Management.",
-  },
-  {
-    title: "Higher Secondary School",
-    organisation: {
-      name: "Mithibai College",
-      href: "https://www.mithibai.ac.in/",
-    },
-    date: "2016-2018",
-    location: "Vile Parle, Mumbai",
-    description:
-      "Completed the course in Electronics Bifocal Science with 68%. Started freelancing making 3D assets for games. Got interested in game development and learned unity and c#",
-  },
-  {
-    title: "Secondary School Education",
-    organisation: {
-      name: "Holy Family High School",
-      href: "https://holyfamilyandheri.org/",
-    },
-    date: "2017-2018",
-    location: "Andheri, Mumbai",
-    description:
-      "Learned good values,dedication and disciplne. Played district football for 5 years.",
+      "Core coursework in Artificial Intelligence, Operating Systems, Computer Architecture (RISC-V), Numerical Methods, Database Systems, and Digital Logic Design.",
   },
 ];
