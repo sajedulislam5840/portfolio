@@ -11,7 +11,14 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   {
     name: "My Portfolio",
     favicon: "",
-    imageUrl: [],
+    imageUrl: [
+      "/images/projects/portfolio-1.png",
+      "/images/projects/portfolio-2.png",
+      "/images/projects/portfolio-3.png",
+      "/images/projects/portfolio-4.png",
+      "/images/projects/portfolio-5.png",
+      "/images/projects/portfolio-6.png",
+    ],
     description:
       "Modern, responsive portfolio website built with Next.js, React, and Tailwind CSS. Includes dynamic project catalogs, verified credential showcases, dark/light theme switching, and optimized Vercel CI/CD deployment.",
     sourceCodeHref: "https://github.com/sajedulislam5840/portfolio",
@@ -97,8 +104,8 @@ export const PROJECT_SHOWCASE = [
     href: "/projects",
     tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
     image: {
-      LIGHT: "",
-      DARK: "",
+      LIGHT: "/images/projects/portfolio-1.png",
+      DARK: "/images/projects/portfolio-1.png",
     },
   },
   {
