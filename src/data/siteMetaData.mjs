@@ -20,4 +20,5 @@
   googleSiteVerification: '',
 };
 
+export { siteMetadata };
 export default siteMetadata;
