@@ -1,17 +1,17 @@
 ﻿import {
-  SiNextdotjs,
-  SiTailwindcss,
-  SiFastapi,
-  SiPostgresql,
-  SiMysql,
   SiPython,
   SiJavascript,
   SiCplusplus,
   SiPandas,
   SiNumpy,
   SiScikitlearn,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiGit,
+  SiVisualstudiocode,
 } from "react-icons/si";
-import { FaJava, FaPhp } from "react-icons/fa";
+import { FaJava } from "react-icons/fa";
+import { TbSql } from "react-icons/tb";
 import { SkillsShowcaseProps } from "@/components/skills/skills-showcase";
 
 export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
@@ -23,25 +23,25 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
         icon: SiPython,
       },
       {
-        name: "JavaScript",
-        icon: SiJavascript,
-      },
-      {
-        name: "Java",
-        icon: FaJava,
+        name: "SQL",
+        icon: TbSql,
       },
       {
         name: "C++",
         icon: SiCplusplus,
       },
       {
-        name: "PHP",
-        icon: FaPhp,
+        name: "Java",
+        icon: FaJava,
+      },
+      {
+        name: "JavaScript",
+        icon: SiJavascript,
       },
     ],
   },
   {
-    sectionName: "Data & Machine Learning",
+    sectionName: "Data Science & Machine Learning",
     skills: [
       {
         name: "Pandas",
@@ -58,27 +58,23 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
     ],
   },
   {
-    sectionName: "Frameworks & Databases",
+    sectionName: "Web & Development Tools",
     skills: [
-      {
-        name: "FastAPI",
-        icon: SiFastapi,
-      },
       {
         name: "Next.js",
         icon: SiNextdotjs,
       },
       {
-        name: "PostgreSQL",
-        icon: SiPostgresql,
-      },
-      {
-        name: "MySQL",
-        icon: SiMysql,
-      },
-      {
         name: "Tailwind CSS",
         icon: SiTailwindcss,
+      },
+      {
+        name: "Git",
+        icon: SiGit,
+      },
+      {
+        name: "VS Code",
+        icon: SiVisualstudiocode,
       },
     ],
   },
