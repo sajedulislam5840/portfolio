@@ -49,9 +49,17 @@ export default function About() {
               showcasing my work in Python, Scikit-Learn, Next.js, SQL, and Edge AI systems.
             </p>
 
-            {/* Location Badge with Bangladesh Flag */}
-            <div className="mt-8 flex items-center justify-end gap-2 text-sm font-semibold text-zinc-700 dark:text-zinc-300">
-              <span className="text-xl leading-none">🇧🇩</span>
+            {/* Location Badge with Vector Bangladesh Flag */}
+            <div className="mt-8 flex items-center justify-end gap-2.5 text-sm font-semibold text-zinc-700 dark:text-zinc-300">
+              <svg
+                className="h-4 w-6 rounded-[2px] shadow-sm"
+                viewBox="0 0 20 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="20" height="12" fill="#006a4e" />
+                <circle cx="9" cy="6" r="4" fill="#f42a41" />
+              </svg>
               <span>Dhaka, Bangladesh</span>
             </div>
           </div>
