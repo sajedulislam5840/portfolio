@@ -1,17 +1,17 @@
-﻿export interface ProjectProps {
+﻿export interface ProjectCardProps {
   name: string;
   favicon: string;
-  imageUrl: string;
+  imageUrl: string[];
   description: string;
   sourceCodeHref: string;
   liveWebsiteHref?: string;
 }
 
-const PROJECT_LIST: ProjectProps[] = [
+export const PROJECTS_CARD: ProjectCardProps[] = [
   {
     name: "AZS: The Catalyst",
     favicon: "/favicon.ico",
-    imageUrl: "/static/images/hero.webp",
+    imageUrl: ["/images/projects/portfolio.webp"],
     description:
       "A production-ready EdTech platform unifying curriculum sequencing, batch management, and subscription tracking with an integrated AI tutor.",
     sourceCodeHref: "https://github.com/sajedulislam5840",
@@ -20,7 +20,7 @@ const PROJECT_LIST: ProjectProps[] = [
   {
     name: "Retail Intelligence Engine",
     favicon: "/favicon.ico",
-    imageUrl: "/static/images/hero.webp",
+    imageUrl: ["/images/projects/portfolio.webp"],
     description:
       "Enterprise multi-source ETL analytics pipeline transforming retail logs into Medallion (Raw to Silver to Gold) architecture.",
     sourceCodeHref: "https://github.com/sajedulislam5840",
@@ -28,7 +28,7 @@ const PROJECT_LIST: ProjectProps[] = [
   {
     name: "Career Switch Prediction",
     favicon: "/favicon.ico",
-    imageUrl: "/static/images/hero.webp",
+    imageUrl: ["/images/projects/portfolio.webp"],
     description:
       "Classification pipeline tackling class imbalance with class-weighted loss, evaluated on 5,000 profiles via Stratified 5-Fold CV.",
     sourceCodeHref: "https://github.com/sajedulislam5840",
@@ -36,15 +36,36 @@ const PROJECT_LIST: ProjectProps[] = [
   {
     name: "SparkEnergies Billing",
     favicon: "/favicon.ico",
-    imageUrl: "/static/images/hero.webp",
+    imageUrl: ["/images/projects/portfolio.webp"],
     description:
       "Utility billing engine on a 3NF normalized schema with double-entry safety for prepaid balances and 6-month usage analytics.",
     sourceCodeHref: "https://github.com/sajedulislam5840",
   },
 ];
 
-export const PROJECT_SHOWCASE_LIST = PROJECT_LIST;
-export const PROJECTS_CARD_LIST = PROJECT_LIST;
-export const projects = PROJECT_LIST;
-export const PROJECTS_DATA = PROJECT_LIST;
-export default PROJECT_LIST;
+export const PROJECT_SHOWCASE = [
+  {
+    index: 0,
+    title: "AZS: The Catalyst",
+    href: "/projects",
+    tags: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+    image: {
+      LIGHT: "/images/projects/portfolio.webp",
+      DARK: "/images/projects/portfolio.webp",
+    },
+  },
+  {
+    index: 1,
+    title: "Retail Intelligence Engine",
+    href: "/projects",
+    tags: ["ETL", "Python", "SQL", "Medallion Architecture"],
+    image: {
+      LIGHT: "/images/projects/portfolio.webp",
+      DARK: "/images/projects/portfolio.webp",
+    },
+  },
+];
+
+export const PROJECT_SHOWCASE_LIST = PROJECTS_CARD;
+export const projects = PROJECTS_CARD;
+export default PROJECTS_CARD;

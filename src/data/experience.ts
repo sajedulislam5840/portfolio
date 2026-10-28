@@ -9,7 +9,7 @@
   description?: string[];
 }
 
-export const EXPERIENCE_LIST: ExperienceShowcaseListItemProps[] = [
+const EXPERIENCES_DATA: ExperienceShowcaseListItemProps[] = [
   {
     title: "Data Preparation Specialist Intern",
     organisation: {
@@ -24,3 +24,9 @@ export const EXPERIENCE_LIST: ExperienceShowcaseListItemProps[] = [
     ],
   },
 ];
+
+export const EXPERIENCE = EXPERIENCES_DATA;
+export const EXPERIENCE_LIST = EXPERIENCES_DATA;
+export const EXPERIENCES = EXPERIENCES_DATA;
+export const experiences = EXPERIENCES_DATA;
+export default EXPERIENCES_DATA;
