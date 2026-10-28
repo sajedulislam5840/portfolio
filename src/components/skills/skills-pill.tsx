@@ -1,16 +1,19 @@
-import { FC, SVGProps } from "react";
+﻿import React from "react";
 
-export type SkillPillProps = {
+export interface SkillPillProps {
   name: string;
-  icon: FC<SVGProps<SVGSVGElement>>;
-};
+  icon: React.ComponentType<{ className?: string }>;
+}
 
-export default function SkillPill(props: SkillPillProps) {
-  const { name, icon: Icon } = props;
+export default function SkillsPill({ name, icon: Icon }: SkillPillProps) {
   return (
-    <div className="flex w-max items-center gap-2 overflow-hidden rounded-lg border border-accent/20 bg-white px-4 py-3 text-sm shadow-sm dark:bg-zinc-800 sm:text-base md:px-6 md:py-3 md:text-lg">
-      <Icon className="h-5 w-5 sm:h-8 sm:w-8" />
-      <span className="font-medium">{name}</span>
+    <div className="flex items-center gap-3 rounded-xl border border-zinc-200 bg-white/70 px-4 py-2.5 shadow-sm backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/70">
+      <div className="flex h-6 w-6 items-center justify-center text-xl">
+        <Icon />
+      </div>
+      <span className="text-sm font-medium text-zinc-800 dark:text-zinc-200">
+        {name}
+      </span>
     </div>
   );
 }
