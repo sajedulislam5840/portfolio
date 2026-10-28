@@ -14,20 +14,6 @@ export default function Home() {
         title={`${siteMetadata.author} | Software Engineer`}
         description={siteMetadata.description}
         canonical={siteMetadata.siteUrl}
-        openGraph={{
-          url: siteMetadata.siteUrl,
-          title: `${siteMetadata.author} | Software Engineer`,
-          description: siteMetadata.description,
-          images: [
-            {
-              url: `${siteMetadata.siteUrl}${siteMetadata.socialBanner}`,
-              width: 1200,
-              height: 630,
-              alt: siteMetadata.author,
-            },
-          ],
-          site_name: siteMetadata.author,
-        }}
       />
 
       <div className="mx-auto max-w-7xl px-6 py-12 sm:px-14 md:px-20 lg:px-32">
@@ -42,9 +28,7 @@ export default function Home() {
             </p>
 
             <div className="mt-6 space-y-2 text-base leading-relaxed text-zinc-600 dark:text-zinc-300 sm:text-lg">
-              <p>
-                CSE undergraduate at BRAC University.
-              </p>
+              <p>CSE undergraduate at BRAC University.</p>
               <p>
                 I build web platforms, machine learning models, and database systems, with a strong interest in how software runs on hardware.
               </p>
@@ -53,7 +37,7 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Call-to-Action Buttons */}
+            {/* CTA Buttons */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 href="/projects"
@@ -72,7 +56,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Portrait Asset */}
           <div className="relative mx-auto flex h-[340px] w-full max-w-[300px] items-end justify-center md:col-span-5 md:h-[420px] md:max-w-none">
             <Image
               src="/images/heroProfile.png"
@@ -85,7 +68,7 @@ export default function Home() {
         </section>
 
         {/* Featured Projects Showcase */}
-        {PROJECT_SHOWCASE && PROJECT_SHOWCASE.length > 0 && (
+        {PROJECT_SHOWCASE && (
           <section className="my-16">
             <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-3xl">
               Featured Projects
