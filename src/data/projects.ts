@@ -1,5 +1,6 @@
 ﻿export interface ProjectCardProps {
   name: string;
+  category?: "Featured" | "More Projects";
   favicon: string;
   imageUrl: string[];
   description: string;
@@ -9,34 +10,8 @@
 
 export const PROJECTS_CARD: ProjectCardProps[] = [
   {
-    name: "My Portfolio",
-    favicon: "",
-    imageUrl: [
-      "/images/projects/portfolio-1.png",
-      "/images/projects/portfolio-2.png",
-      "/images/projects/portfolio-3.png",
-      "/images/projects/portfolio-4.png",
-      "/images/projects/portfolio-5.png",
-      "/images/projects/portfolio-6.png",
-    ],
-    description:
-      "Modern, responsive portfolio website built with Next.js, React, and Tailwind CSS. Includes dynamic project catalogs, verified credential showcases, dark/light theme switching, and optimized Vercel CI/CD deployment.",
-    sourceCodeHref: "https://github.com/sajedulislam5840/portfolio",
-    liveWebsiteHref: "https://sajedul-islam-portfolio.vercel.app",
-  },
-  {
-    name: "RISC-V Edge AI Acceleration",
-    favicon: "",
-    imageUrl: [
-      "/images/projects/riscv-architecture.png",
-      "/images/projects/riscv-benchmark.png",
-    ],
-    description:
-      "Hardware-software co-design research exploring custom RISC-V instruction extensions and quantized ML inference pipelines optimized for resource-constrained edge systems.",
-    sourceCodeHref: "https://github.com/sajedulislam5840/riscv-edge-ai",
-  },
-  {
     name: "AZS: The Catalyst",
+    category: "Featured",
     favicon: "",
     imageUrl: [
       "/images/projects/catalyst-hero.png",
@@ -45,12 +20,13 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "/images/projects/catalyst-register.png",
     ],
     description:
-      "A production-ready EdTech platform unifying curriculum sequencing, batch management, and subscription tracking with an integrated AI tutor.",
+      "EdTech platform providing unified curriculum sequencing, batch management, and fee tracking with an integrated AI tutor. Built for A.Z.S. Science Care academic cohorts. Stack: Next.js, React, Tailwind CSS, Framer Motion.",
     sourceCodeHref: "https://github.com/sajedulislam5840/AZS-The-Catalyst",
     liveWebsiteHref: "https://azs-the-catalyst.vercel.app",
   },
   {
     name: "Career Switch Prediction",
+    category: "Featured",
     favicon: "",
     imageUrl: [
       "/images/projects/career-switch-1.png",
@@ -70,11 +46,12 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "/images/projects/career-switch-15.png",
     ],
     description:
-      "Classification pipeline tackling class imbalance with class-weighted loss, evaluated on 5,000 profiles via Stratified 5-Fold CV.",
+      "Tabular ML classification pipeline evaluating career transition intent across 5,000 professional records. Addressed class imbalance using class-weighted penalties and validated via Stratified 5-Fold Cross Validation. Stack: Python, Scikit-Learn, Pandas.",
     sourceCodeHref: "https://github.com/sajedulislam5840/CSE422",
   },
   {
     name: "SparkEnergies Billing",
+    category: "Featured",
     favicon: "",
     imageUrl: [
       "/images/projects/sparkenergies-1.png",
@@ -84,68 +61,88 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "/images/projects/sparkenergies-5.png",
     ],
     description:
-      "Utility billing engine on a 3NF normalized schema with double-entry safety for prepaid balances and 6-month usage analytics.",
+      "Utility billing and balance management engine built on a normalized 3NF relational schema. Implements double-entry ledger validation to prevent prepaid balance discrepancy, paired with monthly usage analytics. Stack: PHP, MySQL.",
     sourceCodeHref: "https://github.com/sajedulislam5840/CSE370",
   },
   {
+    name: "RISC-V Edge AI Acceleration",
+    category: "Featured",
+    favicon: "",
+    imageUrl: [
+      "/images/projects/riscv-architecture.png",
+      "/images/projects/riscv-benchmark.png",
+    ],
+    description:
+      "Research prototype studying hardware-software co-design on RISC-V architectures. Analyzes custom instruction sets and low-precision quantized ML inference pipelines on resource-constrained compute nodes.",
+    sourceCodeHref: "https://github.com/sajedulislam5840/riscv-edge-ai",
+  },
+  {
     name: "Retail Intelligence Engine",
+    category: "More Projects",
     favicon: "",
     imageUrl: [],
     description:
-      "Enterprise multi-source ETL analytics pipeline transforming retail logs into Medallion (Raw to Silver to Gold) architecture.",
+      "Multi-source ETL pipeline transforming transactional retail data into a Medallion data lake architecture (Raw to Silver to Gold) with automated data cleaning and aggregated reporting views. Stack: Python, SQL, Pandas.",
     sourceCodeHref: "https://github.com/sajedulislam5840/amazon-sales-etl-pipeline",
+  },
+  {
+    name: "My Portfolio",
+    category: "More Projects",
+    favicon: "",
+    imageUrl: [
+      "/images/projects/portfolio-1.png",
+      "/images/projects/portfolio-2.png",
+      "/images/projects/portfolio-3.png",
+      "/images/projects/portfolio-4.png",
+      "/images/projects/portfolio-5.png",
+      "/images/projects/portfolio-6.png",
+    ],
+    description:
+      "Personal portfolio platform engineered with Next.js, React, and Tailwind CSS. Features dynamic project showcases, responsive image carousels, and automated Vercel CI/CD deployments. Stack: Next.js, TypeScript, Tailwind CSS.",
+    sourceCodeHref: "https://github.com/sajedulislam5840/portfolio",
+    liveWebsiteHref: "https://sajedul-islam-portfolio.vercel.app",
   },
 ];
 
 export const PROJECT_SHOWCASE = [
   {
     index: 0,
-    title: "My Portfolio",
-    href: "/projects",
-    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
-    image: {
-      LIGHT: "/images/projects/portfolio-1.png",
-      DARK: "/images/projects/portfolio-1.png",
-    },
-  },
-  {
-    index: 1,
-    title: "RISC-V Edge AI Acceleration",
-    href: "/projects",
-    tags: ["RISC-V", "Edge AI", "Computer Architecture", "Hardware-Software Co-Design"],
-    image: {
-      LIGHT: "/images/projects/riscv-architecture.png",
-      DARK: "/images/projects/riscv-architecture.png",
-    },
-  },
-  {
-    index: 2,
     title: "AZS: The Catalyst",
     href: "/projects",
-    tags: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+    tags: ["Next.js", "React", "EdTech", "Tailwind CSS"],
     image: {
       LIGHT: "/images/projects/catalyst-hero.png",
       DARK: "/images/projects/catalyst-hero.png",
     },
   },
   {
-    index: 3,
+    index: 1,
     title: "Career Switch Prediction",
     href: "/projects",
-    tags: ["Machine Learning", "Scikit-Learn", "Python"],
+    tags: ["Machine Learning", "Scikit-Learn", "Stratified CV", "Python"],
     image: {
       LIGHT: "/images/projects/career-switch-1.png",
       DARK: "/images/projects/career-switch-1.png",
     },
   },
   {
-    index: 4,
+    index: 2,
     title: "SparkEnergies Billing",
     href: "/projects",
-    tags: ["Database", "SQL", "3NF Schema", "PHP"],
+    tags: ["Database Systems", "MySQL", "3NF Normalization", "PHP"],
     image: {
       LIGHT: "/images/projects/sparkenergies-1.png",
       DARK: "/images/projects/sparkenergies-1.png",
+    },
+  },
+  {
+    index: 3,
+    title: "RISC-V Edge AI Acceleration",
+    href: "/projects",
+    tags: ["RISC-V", "Edge AI", "Computer Architecture", "Systems"],
+    image: {
+      LIGHT: "/images/projects/riscv-architecture.png",
+      DARK: "/images/projects/riscv-architecture.png",
     },
   },
 ];

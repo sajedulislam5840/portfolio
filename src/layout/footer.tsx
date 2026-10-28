@@ -1,7 +1,6 @@
 ﻿import Link from "next/link";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
-import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -11,7 +10,7 @@ export default function Footer() {
           © {new Date().getFullYear()} {siteMetadata.author}. All rights reserved.
         </p>
 
-        <div className="flex items-center gap-5 text-zinc-600 dark:text-zinc-400">
+        <div className="flex items-center gap-6 text-zinc-600 dark:text-zinc-400">
           {siteMetadata.github && (
             <Link
               href={siteMetadata.github}
@@ -33,30 +32,6 @@ export default function Footer() {
               className="transition hover:text-teal-600 dark:hover:text-teal-400"
             >
               <FiLinkedin className="h-5 w-5" />
-            </Link>
-          )}
-
-          {siteMetadata.facebook && (
-            <Link
-              href={siteMetadata.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="transition hover:text-blue-600 dark:hover:text-blue-400"
-            >
-              <FaFacebook className="h-5 w-5" />
-            </Link>
-          )}
-
-          {siteMetadata.whatsapp && (
-            <Link
-              href={siteMetadata.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp"
-              className="transition hover:text-emerald-500 dark:hover:text-emerald-400"
-            >
-              <FaWhatsapp className="h-5 w-5" />
             </Link>
           )}
 

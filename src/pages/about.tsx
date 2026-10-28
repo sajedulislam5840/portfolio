@@ -11,13 +11,11 @@ export default function About() {
     <>
       <NextSeo
         title={`About | ${siteMetadata.author}`}
-        description="About Mir Mohammad Sajedul Islam"
+        description={siteMetadata.description}
         canonical={`${siteMetadata.siteUrl}/about`}
       />
       <div className="mx-auto max-w-7xl px-6 py-12 sm:px-14 md:px-20 lg:px-32">
-        {/* Clean Original Hero: Transparent PNG without masks */}
         <section className="relative grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-14">
-          {/* Left Portrait */}
           <div className="relative mx-auto flex h-[360px] w-full max-w-[320px] items-end justify-center md:col-span-5 md:h-[440px] md:max-w-none">
             <Image
               src="/images/heroProfile.png"
@@ -28,14 +26,17 @@ export default function About() {
             />
           </div>
 
-          {/* Right Intro Content */}
           <div className="flex flex-col justify-center md:col-span-7">
             <h1 className="text-4xl font-extrabold tracking-tight text-teal-600 dark:text-teal-400 sm:text-6xl lg:text-7xl">
               Hi, I&apos;m Sajedul Islam
             </h1>
 
-            <p className="mt-6 text-base leading-relaxed text-zinc-600 dark:text-zinc-300 sm:text-lg">
-              Undergraduate Computer Science and Engineering student at BRAC University specializing in Data Engineering, Machine Learning, and Systems Architecture. I focus on building efficient, resilient software solutions ranging from high-throughput ETL data pipelines to hardware-accelerated edge inference on RISC-V.
+            <p className="mt-4 text-lg font-semibold text-zinc-800 dark:text-zinc-200 sm:text-xl">
+              Software Engineer — Full-Stack, ML &amp; Systems
+            </p>
+
+            <p className="mt-4 text-base leading-relaxed text-zinc-600 dark:text-zinc-300 sm:text-lg">
+              Computer Science and Engineering undergraduate at BRAC University. I build web platforms, ML models, and normalized database systems, with a core focus on how software executes reliably down to the hardware level.
             </p>
 
             <p className="mt-4 text-base leading-relaxed text-zinc-600 dark:text-zinc-300 sm:text-lg">
@@ -46,10 +47,9 @@ export default function About() {
               >
                 projects
               </Link>{" "}
-              showcasing my work in Python, Scikit-Learn, Next.js, SQL, and Edge AI systems.
+              covering ed-tech web architectures, transactional database engines, tabular ML pipelines, and RISC-V edge experiments.
             </p>
 
-            {/* Location Badge with Vector Bangladesh Flag */}
             <div className="mt-8 flex items-center justify-end gap-2.5 text-sm font-semibold text-zinc-700 dark:text-zinc-300">
               <svg
                 className="h-4 w-6 rounded-[2px] shadow-sm"
@@ -65,7 +65,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* Experience Section */}
         {EXPERIENCE && EXPERIENCE.length > 0 && (
           <section className="my-16">
             <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-3xl">
@@ -95,7 +94,6 @@ export default function About() {
           </section>
         )}
 
-        {/* Education Section */}
         <section className="my-16">
           <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-3xl">
             Education
@@ -127,7 +125,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* Certificates & Achievements Grid */}
         <CertificatesShowcase />
       </div>
     </>
