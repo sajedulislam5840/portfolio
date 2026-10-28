@@ -1,68 +1,95 @@
 ﻿import { NextSeo } from "next-seo";
-import Link from "next/link";
+import Image from "next/image";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 import CertificatesShowcase from "@/components/documents/certificates-showcase";
 import { EDUCATION } from "@/data/education";
-import { FiExternalLink, FiMapPin, FiCalendar } from "react-icons/fi";
+import { EXPERIENCE } from "@/data/experience";
 
 export default function About() {
   return (
     <>
       <NextSeo
         title={`About | ${siteMetadata.author}`}
-        description="Background, academic qualifications, military cadetship, and technical journey of Mir Mohammad Sajedul Islam."
+        description="About Mir Mohammad Sajedul Islam"
         canonical={`${siteMetadata.siteUrl}/about`}
       />
       <div className="mx-auto max-w-7xl px-6 py-12 sm:px-14 md:px-20 lg:px-32">
-        <div className="max-w-3xl">
-          <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-5xl">
-            About Me
-          </h1>
-          <p className="mt-6 text-base leading-relaxed text-zinc-600 dark:text-zinc-400 sm:text-lg">
-            Undergraduate Computer Science and Engineering student at BRAC University specializing in Data Engineering, Machine Learning, and Full-Stack Systems. Combines rigorous academic foundations with practical software engineering, alongside a background in BNCC military cadetship and competitive athletics.
-          </p>
-        </div>
+        {/* Ager Original Top Hero Section */}
+        <section className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+          <div className="flex flex-col gap-4">
+            <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-5xl">
+              About Me
+            </h1>
+            <p className="text-base leading-relaxed text-zinc-600 dark:text-zinc-400 sm:text-lg">
+              I am an undergraduate Computer Science and Engineering student at BRAC University specializing in Data Engineering, Machine Learning, and Full-Stack Systems.
+            </p>
+          </div>
+          <div className="relative mx-auto h-64 w-64 overflow-hidden rounded-3xl border-2 border-teal-500/20 shadow-xl sm:h-80 sm:w-80">
+            <Image
+              src="/images/heroProfile.png"
+              alt="Mir Mohammad Sajedul Islam"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </section>
 
-        {/* Education Timeline */}
+        {/* Experience Section */}
+        {EXPERIENCE && EXPERIENCE.length > 0 && (
+          <section className="my-16">
+            <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-3xl">
+              Experience
+            </h2>
+            <div className="mt-8 flex flex-col gap-6">
+              {EXPERIENCE.map((exp: any, index: number) => (
+                <div
+                  key={index}
+                  className="rounded-2xl border border-zinc-200 bg-white/70 p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900/70"
+                >
+                  <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">
+                    {exp.title}
+                  </h3>
+                  <p className="text-sm font-semibold text-teal-600 dark:text-teal-400">
+                    {exp.company}
+                  </p>
+                  <p className="mt-2 text-xs text-zinc-500">{exp.date}</p>
+                  {exp.description && (
+                    <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+                      {exp.description}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Education Section */}
         <section className="my-16">
           <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-3xl">
             Education
           </h2>
           <div className="mt-8 flex flex-col gap-6">
-            {EDUCATION.map((item) => (
+            {EDUCATION.map((edu, index) => (
               <div
-                key={item.title}
-                className="rounded-2xl border border-zinc-200 bg-white/70 p-6 shadow-sm backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-900/70"
+                key={index}
+                className="rounded-2xl border border-zinc-200 bg-white/70 p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900/70"
               >
-                <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
+                <div className="flex flex-col justify-between sm:flex-row sm:items-center">
                   <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">
-                    {item.title}
+                    {edu.title}
                   </h3>
-                  <div className="flex items-center gap-2 text-xs font-semibold text-teal-600 dark:text-teal-400">
-                    <FiCalendar className="h-4 w-4" />
-                    <span>{item.date}</span>
-                  </div>
-                </div>
-
-                <div className="mt-2 flex flex-wrap items-center gap-4 text-xs text-zinc-500 dark:text-zinc-400">
-                  <Link
-                    href={item.organisation.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 font-medium hover:text-teal-600 dark:hover:text-teal-400"
-                  >
-                    <span>{item.organisation.name}</span>
-                    <FiExternalLink className="h-3 w-3" />
-                  </Link>
-                  <span className="inline-flex items-center gap-1">
-                    <FiMapPin className="h-3 w-3" />
-                    <span>{item.location}</span>
+                  <span className="text-xs font-semibold text-teal-600 dark:text-teal-400">
+                    {edu.date}
                   </span>
                 </div>
-
-                {item.description && (
-                  <p className="mt-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-                    {item.description}
+                <p className="mt-1 text-sm font-medium text-zinc-700 dark:text-zinc-300">
+                  {edu.organisation.name} — <span className="text-xs text-zinc-500">{edu.location}</span>
+                </p>
+                {edu.description && (
+                  <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+                    {edu.description}
                   </p>
                 )}
               </div>
@@ -70,7 +97,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Dedicated Certificates & Achievements Grid */}
+        {/* Shobar Niche Certificates & Achievements Grid */}
         <CertificatesShowcase />
       </div>
     </>
