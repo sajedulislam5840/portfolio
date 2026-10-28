@@ -1,4 +1,18 @@
-﻿import { SkillsShowcaseProps } from "@/components/skills/skills-showcase";
+﻿import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiFastapi,
+  SiPostgresql,
+  SiMysql,
+  SiPython,
+  SiJavascript,
+  SiCplusplus,
+  SiPandas,
+  SiNumpy,
+  SiScikitlearn,
+} from "react-icons/si";
+import { FaJava, FaPhp } from "react-icons/fa";
+import { SkillsShowcaseProps } from "@/components/skills/skills-showcase";
 
 export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
   {
@@ -6,27 +20,23 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
     skills: [
       {
         name: "Python",
-        icon: "/icons/python.svg",
-      },
-      {
-        name: "SQL",
-        icon: "/icons/sql.svg",
+        icon: SiPython,
       },
       {
         name: "JavaScript",
-        icon: "/icons/javascript.svg",
+        icon: SiJavascript,
       },
       {
         name: "Java",
-        icon: "/icons/java.svg",
+        icon: FaJava,
       },
       {
         name: "C++",
-        icon: "/icons/cpp.svg",
+        icon: SiCplusplus,
       },
       {
         name: "PHP",
-        icon: "/icons/php.svg",
+        icon: FaPhp,
       },
     ],
   },
@@ -35,19 +45,15 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
     skills: [
       {
         name: "Pandas",
-        icon: "/icons/pandas.svg",
+        icon: SiPandas,
       },
       {
         name: "NumPy",
-        icon: "/icons/numpy.svg",
+        icon: SiNumpy,
       },
       {
         name: "Scikit-Learn",
-        icon: "/icons/scikit-learn.svg",
-      },
-      {
-        name: "Matplotlib",
-        icon: "/icons/matplotlib.svg",
+        icon: SiScikitlearn,
       },
     ],
   },
@@ -56,23 +62,23 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
     skills: [
       {
         name: "FastAPI",
-        icon: "/icons/fastapi.svg",
+        icon: SiFastapi,
       },
       {
         name: "Next.js",
-        icon: "/icons/nextjs.svg",
+        icon: SiNextdotjs,
       },
       {
         name: "PostgreSQL",
-        icon: "/icons/postgresql.svg",
+        icon: SiPostgresql,
       },
       {
         name: "MySQL",
-        icon: "/icons/mysql.svg",
+        icon: SiMysql,
       },
       {
         name: "Tailwind CSS",
-        icon: "/icons/tailwind.svg",
+        icon: SiTailwindcss,
       },
     ],
   },
