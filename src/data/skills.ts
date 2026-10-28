@@ -1,83 +1,52 @@
-﻿import {
-  SiPython,
-  SiJavascript,
-  SiCplusplus,
-  SiPandas,
-  SiNumpy,
-  SiScikitlearn,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiGit,
-  SiVisualstudiocode,
-} from "react-icons/si";
-import { FaJava } from "react-icons/fa";
-import { TbSql } from "react-icons/tb";
-import { SkillsShowcaseProps } from "@/components/skills/skills-showcase";
+﻿export interface SkillItem {
+  name: string;
+}
 
-export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
+export interface SkillCategory {
+  title: string;
+  skills: SkillItem[];
+}
+
+export const SKILLS_DATA: SkillCategory[] = [
   {
-    sectionName: "Languages",
+    title: "Languages & Systems",
     skills: [
-      {
-        name: "Python",
-        icon: SiPython,
-      },
-      {
-        name: "SQL",
-        icon: TbSql,
-      },
-      {
-        name: "C++",
-        icon: SiCplusplus,
-      },
-      {
-        name: "Java",
-        icon: FaJava,
-      },
-      {
-        name: "JavaScript",
-        icon: SiJavascript,
-      },
+      { name: "Python" },
+      { name: "C / C++" },
+      { name: "TypeScript" },
+      { name: "JavaScript" },
+      { name: "PHP" },
+      { name: "RISC-V Assembly" },
+      { name: "SQL" },
     ],
   },
   {
-    sectionName: "Data Science & Machine Learning",
+    title: "Frameworks & Web",
     skills: [
-      {
-        name: "Pandas",
-        icon: SiPandas,
-      },
-      {
-        name: "NumPy",
-        icon: SiNumpy,
-      },
-      {
-        name: "Scikit-Learn",
-        icon: SiScikitlearn,
-      },
+      { name: "React" },
+      { name: "Next.js" },
+      { name: "Node.js" },
+      { name: "Tailwind CSS" },
+      { name: "HTML5 / CSS3" },
     ],
   },
   {
-    sectionName: "Web & Development Tools",
+    title: "Databases & ML",
     skills: [
-      {
-        name: "Next.js",
-        icon: SiNextdotjs,
-      },
-      {
-        name: "Tailwind CSS",
-        icon: SiTailwindcss,
-      },
-      {
-        name: "Git",
-        icon: SiGit,
-      },
-      {
-        name: "VS Code",
-        icon: SiVisualstudiocode,
-      },
+      { name: "MySQL (3NF)" },
+      { name: "PostgreSQL" },
+      { name: "Scikit-Learn" },
+      { name: "Pandas & NumPy" },
+      { name: "Data Modeling" },
+    ],
+  },
+  {
+    title: "Tools & Architectures",
+    skills: [
+      { name: "Git & GitHub" },
+      { name: "Linux / Bash" },
+      { name: "RISC-V Toolchain / Spike Simulator" },
+      { name: "Vercel CI/CD" },
     ],
   },
 ];
-
-export default SKILLS_DATA;

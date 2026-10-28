@@ -3,7 +3,7 @@
   author: "Mir Mohammad Sajedul Islam",
   headerTitle: "Sajedul Islam",
   description:
-    "CSE undergraduate at BRAC University building full-stack web platforms, machine learning pipelines, and database systems with an interest in low-level systems execution.",
+    "CSE undergraduate at BRAC University building web platforms, machine learning models, and database systems with an interest in low-level systems execution. Seeking internship and junior engineering roles.",
   language: "en-us",
   theme: "system",
   siteUrl: "https://sajedul-islam-portfolio.vercel.app",
