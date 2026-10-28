@@ -34,6 +34,20 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     liveWebsiteHref: "https://azs-the-catalyst.vercel.app",
   },
   {
+    name: "SparkEnergies Billing",
+    favicon: "",
+    imageUrl: [
+      "/images/projects/sparkenergies-1.png",
+      "/images/projects/sparkenergies-2.png",
+      "/images/projects/sparkenergies-3.png",
+      "/images/projects/sparkenergies-4.png",
+      "/images/projects/sparkenergies-5.png",
+    ],
+    description:
+      "Utility billing engine on a 3NF normalized schema with double-entry safety for prepaid balances and 6-month usage analytics.",
+    sourceCodeHref: "https://github.com/sajedulislam5840/CSE370",
+  },
+  {
     name: "Retail Intelligence Engine",
     favicon: "",
     imageUrl: [],
@@ -48,14 +62,6 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     description:
       "Classification pipeline tackling class imbalance with class-weighted loss, evaluated on 5,000 profiles via Stratified 5-Fold CV.",
     sourceCodeHref: "https://github.com/sajedulislam5840/CSE422",
-  },
-  {
-    name: "SparkEnergies Billing",
-    favicon: "",
-    imageUrl: [],
-    description:
-      "Utility billing engine on a 3NF normalized schema with double-entry safety for prepaid balances and 6-month usage analytics.",
-    sourceCodeHref: "https://github.com/sajedulislam5840/CSE370",
   },
 ];
 
@@ -82,19 +88,19 @@ export const PROJECT_SHOWCASE = [
   },
   {
     index: 2,
-    title: "Retail Intelligence Engine",
+    title: "SparkEnergies Billing",
     href: "/projects",
-    tags: ["ETL", "Python", "SQL", "Medallion"],
+    tags: ["Database", "SQL", "3NF Schema", "PHP"],
     image: {
-      LIGHT: "",
-      DARK: "",
+      LIGHT: "/images/projects/sparkenergies-1.png",
+      DARK: "/images/projects/sparkenergies-1.png",
     },
   },
   {
     index: 3,
-    title: "Career Switch Prediction",
+    title: "Retail Intelligence Engine",
     href: "/projects",
-    tags: ["Machine Learning", "Scikit-Learn", "Python"],
+    tags: ["ETL", "Python", "SQL", "Medallion"],
     image: {
       LIGHT: "",
       DARK: "",
