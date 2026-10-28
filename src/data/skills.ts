@@ -1,178 +1,81 @@
-import {
-  SiExpress,
-  SiSocketdotio,
-  SiPrisma,
-  SiNextdotjs,
-  SiFlask,
-} from "react-icons/si";
-import {
-  FramerMotionIcon,
-  ReactRouterDomIcon,
-  VitePwaIcon,
-} from "@/components/icons";
-import { type SkillsShowcaseProps } from "@/components/skills/skills-showcase";
-
-// Languages
-import HtmlSvg from "@/public/icons/html.svg";
-import CsssSvg from "@/public/icons/css.svg";
-import SassSvg from "@/public/icons/sass.svg";
-import JavascriptSvg from "@/public/icons/javascript.svg";
-import TypescriptSvg from "@/public/icons/typescript.svg";
-import PythonSvg from "@/public/icons/python.svg";
-
-// Libraries
-import ReactjsSvg from "@/public/icons/reactjs.svg";
-import SolidjsSvg from "@/public/icons/solidjs.svg";
-import ReduxSvg from "@/public/icons/redux.svg";
-import TailwindcssSvg from "@/public/icons/tailwindcss.svg";
-import MuiSvg from "@/public/icons/mui.svg";
-import ViteSvg from "@/public/icons/vite.svg";
-
-// Backend
-import NodejsSvg from "@/public/icons/nodejs.svg";
-
-// Database and ORMS
-import MongoDBSvg from "@/public/icons/mongodb.svg";
-import PostgressSvg from "@/public/icons/postgresql.svg";
-
-// Tools and Tech
-import GitSvg from "@/public/icons/git.svg";
-import DockerSvg from "@/public/icons/docker.svg";
-import AwsSvg from "@/public/icons/aws.svg";
-import PostmanSvg from "@/public/icons/postman.svg";
+﻿import { SkillsShowcaseProps } from "@/components/skills/skills-showcase";
 
 export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
   {
     sectionName: "Languages",
     skills: [
       {
-        name: "HTML",
-        icon: HtmlSvg,
-      },
-      {
-        name: "CSS",
-        icon: CsssSvg,
-      },
-      {
-        name: "SASS",
-        icon: SassSvg,
-      },
-      {
-        name: "Javascript",
-        icon: JavascriptSvg,
-      },
-      {
-        name: "Typescript",
-        icon: TypescriptSvg,
-      },
-      {
         name: "Python",
-        icon: PythonSvg,
+        icon: "/icons/python.svg",
+      },
+      {
+        name: "SQL",
+        icon: "/icons/sql.svg",
+      },
+      {
+        name: "JavaScript",
+        icon: "/icons/javascript.svg",
+      },
+      {
+        name: "Java",
+        icon: "/icons/java.svg",
+      },
+      {
+        name: "C++",
+        icon: "/icons/cpp.svg",
+      },
+      {
+        name: "PHP",
+        icon: "/icons/php.svg",
       },
     ],
   },
   {
-    sectionName: "Libraries and Frameworks",
+    sectionName: "Data & Machine Learning",
     skills: [
       {
-        name: "Reactjs",
-        icon: ReactjsSvg,
+        name: "Pandas",
+        icon: "/icons/pandas.svg",
       },
       {
-        name: "Nextjs",
-        icon: SiNextdotjs,
+        name: "NumPy",
+        icon: "/icons/numpy.svg",
       },
       {
-        name: "Solidjs",
-        icon: SolidjsSvg,
+        name: "Scikit-Learn",
+        icon: "/icons/scikit-learn.svg",
       },
       {
-        name: "React Router Dom",
-        icon: ReactRouterDomIcon,
-      },
-      {
-        name: "Redux",
-        icon: ReduxSvg,
-      },
-      {
-        name: "Tailwindcss",
-        icon: TailwindcssSvg,
-      },
-      {
-        name: "MUI",
-        icon: MuiSvg,
-      },
-      {
-        name: "Framer motion",
-        icon: FramerMotionIcon,
-      },
-      {
-        name: "Vite",
-        icon: ViteSvg,
-      },
-      {
-        name: "Vite PWA",
-        icon: VitePwaIcon,
+        name: "Matplotlib",
+        icon: "/icons/matplotlib.svg",
       },
     ],
   },
   {
-    sectionName: "Backend",
+    sectionName: "Frameworks & Databases",
     skills: [
       {
-        name: "Nodejs",
-        icon: NodejsSvg,
+        name: "FastAPI",
+        icon: "/icons/fastapi.svg",
       },
       {
-        name: "Express",
-        icon: SiExpress,
+        name: "Next.js",
+        icon: "/icons/nextjs.svg",
       },
       {
-        name: "Socket.io",
-        icon: SiSocketdotio,
+        name: "PostgreSQL",
+        icon: "/icons/postgresql.svg",
       },
       {
-        name: "Flask",
-        icon: SiFlask,
-      },
-    ],
-  },
-  {
-    sectionName: "Databases and ORMs",
-    skills: [
-      {
-        name: "MongoDB",
-        icon: MongoDBSvg,
+        name: "MySQL",
+        icon: "/icons/mysql.svg",
       },
       {
-        name: "Postgress",
-        icon: PostgressSvg,
-      },
-      {
-        name: "Prisma",
-        icon: SiPrisma,
-      },
-    ],
-  },
-  {
-    sectionName: "Tools and Technologies",
-    skills: [
-      {
-        name: "Git",
-        icon: GitSvg,
-      },
-      {
-        name: "Docker",
-        icon: DockerSvg,
-      },
-      {
-        name: "AWS",
-        icon: AwsSvg,
-      },
-      {
-        name: "Postman",
-        icon: PostmanSvg,
+        name: "Tailwind CSS",
+        icon: "/icons/tailwind.svg",
       },
     ],
   },
 ];
+
+export default SKILLS_DATA;
