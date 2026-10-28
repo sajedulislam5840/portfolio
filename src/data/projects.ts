@@ -1,62 +1,44 @@
-﻿export interface Project {
-  title: string;
+﻿export interface ProjectProps {
+  name: string;
+  favicon: string;
+  imageUrl: string;
   description: string;
-  tags: string[];
-  githubUrl?: string;
-  liveUrl?: string;
-  featured?: boolean;
+  sourceCodeHref: string;
+  liveWebsiteHref?: string;
 }
 
-export const projects: Project[] = [
+export const PROJECT_SHOWCASE_LIST: ProjectProps[] = [
   {
-    title: "AZS: The Catalyst — EdTech Ecosystem",
+    name: "AZS: The Catalyst",
+    favicon: "/favicon.ico",
+    imageUrl: "/static/images/hero.webp",
     description:
-      "A production-ready EdTech platform unifying curriculum sequencing, batch management, and subscription tracking. Features an integrated conversational AI tutoring assistant for complex STEM problem-solving.",
-    tags: ["Next.js", "FastAPI", "Neon PostgreSQL", "Tailwind CSS", "AI"],
-    githubUrl: "https://github.com/sajedulislam5840",
-    liveUrl: "https://vercel.com",
-    featured: true,
+      "A production-ready EdTech platform unifying curriculum sequencing, batch management, and subscription tracking with an integrated AI tutor.",
+    sourceCodeHref: "https://github.com/sajedulislam5840",
+    liveWebsiteHref: "https://vercel.com",
   },
   {
-    title: "Retail Intelligence Engine",
+    name: "Retail Intelligence Engine",
+    favicon: "/favicon.ico",
+    imageUrl: "/static/images/hero.webp",
     description:
-      "An enterprise multi-source ETL analytics pipeline. Converts messy retail transaction logs into a clean, audited Raw → Silver → Gold Medallion architecture powering executive analytics dashboards.",
-    tags: [
-      "Python",
-      "Pandas",
-      "Medallion ETL",
-      "Data Validation",
-      "Data Engineering",
-    ],
-    githubUrl: "https://github.com/sajedulislam5840",
-    featured: true,
+      "Enterprise multi-source ETL analytics pipeline transforming retail logs into Medallion (Raw → Silver → Gold) architecture.",
+    sourceCodeHref: "https://github.com/sajedulislam5840",
   },
   {
-    title: "Career Switch Prediction System",
+    name: "Career Switch Prediction",
+    favicon: "/favicon.ico",
+    imageUrl: "/static/images/hero.webp",
     description:
-      "End-to-end classification pipeline addressing 74.8%/25.2% target class imbalance via class-weighted loss. Evaluated across 5,000 professional profiles using Stratified 5-Fold cross-validation (ROC-AUC: 0.716).",
-    tags: [
-      "Python",
-      "Scikit-Learn",
-      "MLP Classifier",
-      "Stratified CV",
-      "Machine Learning",
-    ],
-    githubUrl: "https://github.com/sajedulislam5840",
-    featured: true,
+      "Classification pipeline tackling class imbalance with class-weighted loss, evaluated on 5,000 profiles via Stratified 5-Fold CV.",
+    sourceCodeHref: "https://github.com/sajedulislam5840",
   },
   {
-    title: "SparkEnergies — Utility Billing System",
+    name: "SparkEnergies Billing",
+    favicon: "/favicon.ico",
+    imageUrl: "/static/images/hero.webp",
     description:
-      "A centralized utility billing engine designed on an ER model normalized to 3NF. Built with double-entry transactional safety for prepaid balances and dynamic 6-month usage analytics.",
-    tags: [
-      "PHP",
-      "MySQL",
-      "3NF Normalization",
-      "Database Systems",
-      "ACID Compliance",
-    ],
-    githubUrl: "https://github.com/sajedulislam5840",
-    featured: true,
+      "Utility billing engine on a 3NF normalized schema with double-entry safety for prepaid balances and 6-month usage analytics.",
+    sourceCodeHref: "https://github.com/sajedulislam5840",
   },
 ];
