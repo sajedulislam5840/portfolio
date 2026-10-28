@@ -7,12 +7,10 @@
   SiPython,
   SiMysql,
   SiPostgresql,
-  SiScikitlearn,
   SiGit,
-  SiLinux,
   SiPhp,
 } from "react-icons/si";
-import { VscCpu, VscCode } from "react-icons/vsc";
+import { FiCpu, FiCode, FiTerminal } from "react-icons/fi";
 
 export interface SkillItem {
   name: string;
@@ -32,8 +30,8 @@ export const SKILLS_DATA: SkillCategory[] = [
       { name: "TypeScript", icon: SiTypescript },
       { name: "JavaScript", icon: SiJavascript },
       { name: "PHP", icon: SiPhp },
-      { name: "C / C++", icon: VscCode },
-      { name: "RISC-V", icon: VscCpu },
+      { name: "C / C++", icon: FiCode },
+      { name: "RISC-V", icon: FiCpu },
     ],
   },
   {
@@ -49,14 +47,14 @@ export const SKILLS_DATA: SkillCategory[] = [
     skills: [
       { name: "MySQL (3NF)", icon: SiMysql },
       { name: "PostgreSQL", icon: SiPostgresql },
-      { name: "Scikit-Learn", icon: SiScikitlearn },
+      { name: "Machine Learning", icon: FiCpu },
     ],
   },
   {
     title: "Tools & Architectures",
     skills: [
       { name: "Git & GitHub", icon: SiGit },
-      { name: "Linux / Bash", icon: SiLinux },
+      { name: "Linux / Bash", icon: FiTerminal },
     ],
   },
 ];
