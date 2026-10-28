@@ -9,7 +9,7 @@
 
 export const PROJECTS_CARD: ProjectCardProps[] = [
   {
-    name: "Developer Portfolio v2",
+    name: "My Portfolio",
     favicon: "",
     imageUrl: [],
     description:
@@ -93,7 +93,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
 export const PROJECT_SHOWCASE = [
   {
     index: 0,
-    title: "Developer Portfolio v2",
+    title: "My Portfolio",
     href: "/projects",
     tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
     image: {
