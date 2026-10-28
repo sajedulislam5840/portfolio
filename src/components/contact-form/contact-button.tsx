@@ -1,53 +1,34 @@
-import { useEffect, useRef, useState } from "react";
-
-import { MailIcon } from "lucide-react";
-
-import FloatingMailButton, {
-  floatingMailButtonoptions,
-} from "@/components/contact-form/floating-mail-button";
+﻿import { useState } from "react";
+import Link from "next/link";
+import { FiMail } from "react-icons/fi";
 import ContactFormModal from "@/components/contact-form/contact-form-modal";
+import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 export default function ContactButton() {
-  const refSendBtn = useRef<HTMLButtonElement>(null);
-
-  const [isBtnVisible, setIsBtnVisible] = useState(false);
-  const [isOpenModal, setIsOpenModal] = useState(false);
-
-  const observerCallback = (entries: IntersectionObserverEntry[]) => {
-    const [entry] = entries;
-    setIsBtnVisible(!entry.isIntersecting);
-  };
-
-  useEffect(() => {
-    const btn = refSendBtn.current;
-    const observer = new IntersectionObserver(
-      observerCallback,
-      floatingMailButtonoptions,
-    );
-    if (btn) observer.observe(btn);
-    return () => {
-      if (btn) observer.unobserve(btn);
-    };
-  }, [refSendBtn]);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      {isBtnVisible && !isOpenModal && (
-        <FloatingMailButton openModal={setIsOpenModal} />
-      )}
-
-      <button
-        ref={refSendBtn}
-        className="inline-flex items-center gap-2 rounded-md bg-background px-3 py-2 text-accent transition-transform duration-150 focus-within:scale-[1.05] hover:scale-[1.05] hover:bg-foreground hover:text-background"
-        onClick={() => setIsOpenModal(true)}
-      >
-        <MailIcon className="h-6 w-6 sm:h-7 sm:w-7 lg:h-9 lg:w-9" />
-        <span className="text-base font-semibold sm:text-lg lg:text-xl">
-          Send Message
+      <div className="flex flex-col items-center justify-center gap-6 text-center">
+        <span className="rounded-full bg-accent/10 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-accent dark:bg-accent/20">
+          Get in touch
         </span>
-      </button>
-
-      <ContactFormModal showModal={isOpenModal} setShowModal={setIsOpenModal} />
+        <Link
+          href={`mailto:${siteMetadata.email}`}
+          className="text-2xl font-bold tracking-tight text-zinc-800 hover:underline dark:text-zinc-100 sm:text-4xl md:text-5xl"
+        >
+          {siteMetadata.email}
+        </Link>
+        <button
+          type="button"
+          onClick={() => setIsOpen(true)}
+          className="flex items-center gap-2 rounded-lg bg-accent px-6 py-3 font-semibold text-white shadow-md transition hover:bg-accent/90"
+        >
+          <FiMail className="h-5 w-5" />
+          <span>Send Message</span>
+        </button>
+      </div>
+      <ContactFormModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   );
 }
