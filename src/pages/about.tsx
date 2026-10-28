@@ -15,17 +15,19 @@ export default function About() {
         canonical={`${siteMetadata.siteUrl}/about`}
       />
       <div className="mx-auto max-w-7xl px-6 py-12 sm:px-14 md:px-20 lg:px-32">
-        {/* Template Original Hero Layout: Left Illustration + Right Bio */}
+        {/* Hero Section: Vector Blend Illustration + Right Bio */}
         <section className="relative grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-14">
-          {/* Left Portrait Image */}
-          <div className="relative mx-auto flex h-[340px] w-full max-w-[320px] items-end justify-center md:col-span-5 md:h-[420px] md:max-w-none">
-            <Image
-              src="/images/heroProfile.png"
-              alt="Mir Mohammad Sajedul Islam"
-              fill
-              className="object-contain object-bottom"
-              priority
-            />
+          {/* Left Blended Portrait Container */}
+          <div className="relative mx-auto flex h-[360px] w-full max-w-[320px] items-end justify-center md:col-span-5 md:h-[430px] md:max-w-none">
+            <div className="relative h-full w-full [mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)]">
+              <Image
+                src="/images/heroProfile.png"
+                alt="Mir Mohammad Sajedul Islam"
+                fill
+                className="object-contain object-bottom dark:mix-blend-screen"
+                priority
+              />
+            </div>
           </div>
 
           {/* Right Intro Content */}
