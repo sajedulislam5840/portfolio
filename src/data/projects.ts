@@ -9,6 +9,15 @@
 
 export const PROJECTS_CARD: ProjectCardProps[] = [
   {
+    name: "Developer Portfolio v2",
+    favicon: "",
+    imageUrl: [],
+    description:
+      "Modern, responsive portfolio website built with Next.js, React, and Tailwind CSS. Includes dynamic project catalogs, verified credential showcases, dark/light theme switching, and optimized Vercel CI/CD deployment.",
+    sourceCodeHref: "https://github.com/sajedulislam5840/portfolio",
+    liveWebsiteHref: "https://sajedul-islam-portfolio.vercel.app",
+  },
+  {
     name: "RISC-V Edge AI Acceleration",
     favicon: "",
     imageUrl: [
@@ -84,6 +93,16 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
 export const PROJECT_SHOWCASE = [
   {
     index: 0,
+    title: "Developer Portfolio v2",
+    href: "/projects",
+    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    image: {
+      LIGHT: "",
+      DARK: "",
+    },
+  },
+  {
+    index: 1,
     title: "RISC-V Edge AI Acceleration",
     href: "/projects",
     tags: ["RISC-V", "Edge AI", "Computer Architecture", "Hardware-Software Co-Design"],
@@ -93,7 +112,7 @@ export const PROJECT_SHOWCASE = [
     },
   },
   {
-    index: 1,
+    index: 2,
     title: "AZS: The Catalyst",
     href: "/projects",
     tags: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
@@ -103,7 +122,7 @@ export const PROJECT_SHOWCASE = [
     },
   },
   {
-    index: 2,
+    index: 3,
     title: "Career Switch Prediction",
     href: "/projects",
     tags: ["Machine Learning", "Scikit-Learn", "Python"],
@@ -113,7 +132,7 @@ export const PROJECT_SHOWCASE = [
     },
   },
   {
-    index: 3,
+    index: 4,
     title: "SparkEnergies Billing",
     href: "/projects",
     tags: ["Database", "SQL", "3NF Schema", "PHP"],
