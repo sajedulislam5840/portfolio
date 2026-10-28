@@ -1,32 +1,16 @@
-﻿export interface ExperienceShowcaseListItemProps {
+﻿export interface ExperienceItem {
   title: string;
-  organisation: {
-    name: string;
-    href: string;
-  };
+  company: string;
   date: string;
-  location: string;
-  description?: string[];
+  description: string;
 }
 
-const EXPERIENCES_DATA: ExperienceShowcaseListItemProps[] = [
+export const EXPERIENCE: ExperienceItem[] = [
   {
     title: "Data Preparation Specialist Intern",
-    organisation: {
-      name: "DataSynthis",
-      href: "https://github.com/sajedulislam5840",
-    },
-    date: "Internship",
-    location: "Remote",
-    description: [
-      "Engineered high-throughput data validation, schema auditing, and Medallion (Raw-Silver-Gold) deduplication pipelines.",
-      "Ensured zero-loss reporting integrity and transformed raw datasets into clean, analytics-ready engines for downstream BI.",
-    ],
+    company: "DataSynthis",
+    date: "Aug 2025 – Mar 2026",
+    description:
+      "Curated, validated, and preprocessed structured tabular datasets for machine learning pipelines. Performed data hygiene, class distribution balancing, and automated verification checks to ensure high dataset fidelity for downstream model training.",
   },
 ];
-
-export const EXPERIENCE = EXPERIENCES_DATA;
-export const EXPERIENCE_LIST = EXPERIENCES_DATA;
-export const EXPERIENCES = EXPERIENCES_DATA;
-export const experiences = EXPERIENCES_DATA;
-export default EXPERIENCES_DATA;
