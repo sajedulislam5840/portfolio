@@ -12,7 +12,7 @@
   SiLinux,
   SiPhp,
 } from "react-icons/si";
-import { VscCode } from "react-icons/vsc";
+import { VscCpu, VscCode } from "react-icons/vsc";
 
 export interface SkillItem {
   name: string;
@@ -33,7 +33,7 @@ export const SKILLS_DATA: SkillCategory[] = [
       { name: "JavaScript", icon: SiJavascript },
       { name: "PHP", icon: SiPhp },
       { name: "C / C++", icon: VscCode },
-      { name: "RISC-V", icon: VscCode },
+      { name: "RISC-V", icon: VscCpu },
     ],
   },
   {
