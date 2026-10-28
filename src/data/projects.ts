@@ -30,7 +30,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     ],
     description:
       "A production-ready EdTech platform unifying curriculum sequencing, batch management, and subscription tracking with an integrated AI tutor.",
-    sourceCodeHref: "https://github.com/sajedulislam5840",
+    sourceCodeHref: "https://github.com/sajedulislam5840/AZS-The-Catalyst",
     liveWebsiteHref: "https://azs-the-catalyst.vercel.app",
   },
   {
@@ -39,7 +39,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     imageUrl: [],
     description:
       "Enterprise multi-source ETL analytics pipeline transforming retail logs into Medallion (Raw to Silver to Gold) architecture.",
-    sourceCodeHref: "https://github.com/sajedulislam5840",
+    sourceCodeHref: "https://github.com/sajedulislam5840/amazon-sales-etl-pipeline",
   },
   {
     name: "Career Switch Prediction",
@@ -47,7 +47,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     imageUrl: [],
     description:
       "Classification pipeline tackling class imbalance with class-weighted loss, evaluated on 5,000 profiles via Stratified 5-Fold CV.",
-    sourceCodeHref: "https://github.com/sajedulislam5840",
+    sourceCodeHref: "https://github.com/sajedulislam5840/CSE422",
   },
   {
     name: "SparkEnergies Billing",
@@ -55,7 +55,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     imageUrl: [],
     description:
       "Utility billing engine on a 3NF normalized schema with double-entry safety for prepaid balances and 6-month usage analytics.",
-    sourceCodeHref: "https://github.com/sajedulislam5840",
+    sourceCodeHref: "https://github.com/sajedulislam5840/CSE370",
   },
 ];
 
