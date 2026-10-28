@@ -1,47 +1,35 @@
 ﻿import { NextSeo } from "next-seo";
-
-import AboutHero from "@/components/about-hero";
-import ExperienceShowcaseList from "@/components/experience/experience-showcase-list";
-import { EXPERIENCE } from "@/data/experience";
-import { EDUCATION } from "@/data/education";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
+import EducationShowcase from "@/components/education/education-showcase";
+import CertificatesShowcase from "@/components/documents/certificates-showcase";
+import { EDUCATION } from "@/data/education";
 
 export default function About() {
   return (
     <>
       <NextSeo
-        title="About Mir Mohammad Sajedul Islam | Software Developer"
-        description="Learn more about Mir Mohammad Sajedul Islam, a dedicated Software Developer with 2 years of experience. Discover the journey, skills, and passion that drive me to create innovative and user-friendly web solutions."
+        title={`About | ${siteMetadata.author}`}
+        description="Background, academic qualifications, military cadetship, and technical journey of Mir Mohammad Sajedul Islam."
         canonical={`${siteMetadata.siteUrl}/about`}
-        openGraph={{
-          url: `${siteMetadata.siteUrl}/about`,
-          title: "Learn About Mir Mohammad Sajedul Islam - Software Developer",
-          description:
-            "Dive into the story of Mir Mohammad Sajedul Islam, a Software Developer. Uncover the experiences, skills, and passion that fuel a commitment to delivering exceptional web solutions.",
-          images: [
-            {
-              url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
-              alt: "Mir Mohammad Sajedul Islam - Portfolio Image",
-            },
-          ],
-          siteName: siteMetadata.siteName,
-          type: "website",
-        }}
-        twitter={{
-          cardType: "summary_large_image",
-        }}
-        additionalMetaTags={[
-          {
-            property: "keywords",
-            content:
-              "Software Developer portfolio, Software Developer, React Developer, Frontend Developer, Web Developer, JavaScript, HTML, CSS, Professional Journey, Skills, Passion for Web Development",
-          },
-        ]}
       />
-      <AboutHero />
-      <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
-      <ExperienceShowcaseList title="Education" details={EDUCATION} />
+      <div className="mx-auto max-w-7xl px-6 py-12 sm:px-14 md:px-20 lg:px-32">
+        <div className="max-w-3xl">
+          <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-5xl">
+            About Me
+          </h1>
+          <p className="mt-6 text-base leading-relaxed text-zinc-600 dark:text-zinc-400 sm:text-lg">
+            I am an undergraduate Computer Science and Engineering student at BRAC University specializing in Data Engineering, Machine Learning, and Full-Stack Systems. I combine academic rigor with practical engineering, alongside a background in BNCC military cadetship and competitive athletics.
+          </p>
+        </div>
+
+        {/* Education Timeline */}
+        <div className="mt-12">
+          <EducationShowcase list={EDUCATION} />
+        </div>
+
+        {/* Dedicated Certificates & Achievements Grid */}
+        <CertificatesShowcase />
+      </div>
     </>
   );
 }
-
