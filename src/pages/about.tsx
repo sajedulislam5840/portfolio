@@ -1,5 +1,6 @@
 ﻿import { NextSeo } from "next-seo";
 import Image from "next/image";
+import Link from "next/link";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 import CertificatesShowcase from "@/components/documents/certificates-showcase";
 import { EDUCATION } from "@/data/education";
@@ -14,24 +15,45 @@ export default function About() {
         canonical={`${siteMetadata.siteUrl}/about`}
       />
       <div className="mx-auto max-w-7xl px-6 py-12 sm:px-14 md:px-20 lg:px-32">
-        {/* Ager Original Top Hero Section */}
-        <section className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-          <div className="flex flex-col gap-4">
-            <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-5xl">
-              About Me
-            </h1>
-            <p className="text-base leading-relaxed text-zinc-600 dark:text-zinc-400 sm:text-lg">
-              I am an undergraduate Computer Science and Engineering student at BRAC University specializing in Data Engineering, Machine Learning, and Full-Stack Systems.
-            </p>
-          </div>
-          <div className="relative mx-auto h-64 w-64 overflow-hidden rounded-3xl border-2 border-teal-500/20 shadow-xl sm:h-80 sm:w-80">
+        {/* Template Original Hero Layout: Left Illustration + Right Bio */}
+        <section className="relative grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-14">
+          {/* Left Portrait Image */}
+          <div className="relative mx-auto flex h-[340px] w-full max-w-[320px] items-end justify-center md:col-span-5 md:h-[420px] md:max-w-none">
             <Image
               src="/images/heroProfile.png"
               alt="Mir Mohammad Sajedul Islam"
               fill
-              className="object-cover"
+              className="object-contain object-bottom"
               priority
             />
+          </div>
+
+          {/* Right Intro Content */}
+          <div className="flex flex-col justify-center md:col-span-7">
+            <h1 className="text-4xl font-extrabold tracking-tight text-teal-600 dark:text-teal-400 sm:text-6xl lg:text-7xl">
+              Hi, I&apos;m Sajedul Islam
+            </h1>
+
+            <p className="mt-6 text-base leading-relaxed text-zinc-600 dark:text-zinc-300 sm:text-lg">
+              Undergraduate Computer Science and Engineering student at BRAC University specializing in Data Engineering, Machine Learning, and Systems Architecture. I focus on building efficient, resilient software solutions ranging from high-throughput ETL data pipelines to hardware-accelerated edge inference on RISC-V.
+            </p>
+
+            <p className="mt-4 text-base leading-relaxed text-zinc-600 dark:text-zinc-300 sm:text-lg">
+              Explore my latest{" "}
+              <Link
+                href="/projects"
+                className="font-medium text-teal-600 underline underline-offset-4 hover:text-teal-700 dark:text-teal-400"
+              >
+                projects
+              </Link>{" "}
+              showcasing my work in Python, Scikit-Learn, Next.js, SQL, and Edge AI systems.
+            </p>
+
+            {/* Location Badge with Bangladesh Flag */}
+            <div className="mt-8 flex items-center justify-end gap-2 text-sm font-semibold text-zinc-700 dark:text-zinc-300">
+              <span className="text-xl leading-none">🇧🇩</span>
+              <span>Dhaka, Bangladesh</span>
+            </div>
           </div>
         </section>
 
@@ -97,7 +119,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Shobar Niche Certificates & Achievements Grid */}
+        {/* Certificates & Achievements Grid */}
         <CertificatesShowcase />
       </div>
     </>
