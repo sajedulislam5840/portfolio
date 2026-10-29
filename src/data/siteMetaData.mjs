@@ -17,8 +17,9 @@
   facebook: "",
   whatsapp: "",
   youtube: "",
-  linkedin: "https://www.linkedin.com/in/sajedul-islam",
+  linkedin: "https://www.linkedin.com/in/sajedul-islam-data/-data/",
   locale: "en-US",
 };
 
 export { siteMetadata };
+
