@@ -4,6 +4,7 @@
   favicon: string;
   imageUrl: string[];
   description: string;
+  result?: string;
   sourceCodeHref: string;
   liveWebsiteHref?: string;
 }
@@ -20,7 +21,8 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "/images/projects/catalyst-register.png",
     ],
     description:
-      "EdTech platform providing unified curriculum sequencing, batch management, and fee tracking with an integrated AI tutor. Built for A.Z.S. Science Care academic cohorts. Stack: Next.js, React, Tailwind CSS, Framer Motion.",
+      "EdTech cohort management and curriculum delivery engine with an integrated AI tutor. Built for A.Z.S. Science Care academic cohorts.",
+    result: "Live product serving 40+ students with automated progress tracking.",
     sourceCodeHref: "https://github.com/sajedulislam5840/AZS-The-Catalyst",
     liveWebsiteHref: "https://azs-the-catalyst.vercel.app",
   },
@@ -31,23 +33,11 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     imageUrl: [
       "/images/projects/career-switch-1.png",
       "/images/projects/career-switch-2.png",
-      "/images/projects/career-switch-3.png",
-      "/images/projects/career-switch-4.png",
-      "/images/projects/career-switch-5.png",
-      "/images/projects/career-switch-6.png",
-      "/images/projects/career-switch-7.png",
-      "/images/projects/career-switch-8.png",
-      "/images/projects/career-switch-9.png",
-      "/images/projects/career-switch-10.png",
-      "/images/projects/career-switch-11.png",
-      "/images/projects/career-switch-12.png",
-      "/images/projects/career-switch-13.png",
-      "/images/projects/career-switch-14.png",
-      "/images/projects/career-switch-15.png",
     ],
     description:
-      "Tabular ML classification pipeline evaluating career transition intent across 5,000 professional records. Addressed class imbalance using class-weighted penalties and validated via Stratified 5-Fold Cross Validation. Stack: Python, Scikit-Learn, Pandas.",
-    sourceCodeHref: "https://github.com/sajedulislam5840/CSE422",
+      "Tabular classification model evaluating transition intent across 5,000 professional profiles. Optimized for Recall using class-weighted penalties.",
+    result: "Achieved 84% recall using Stratified 5-Fold Cross Validation.",
+    sourceCodeHref: "https://github.com/sajedulislam5840/career-switch-prediction",
   },
   {
     name: "SparkEnergies Billing",
@@ -56,13 +46,11 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     imageUrl: [
       "/images/projects/sparkenergies-1.png",
       "/images/projects/sparkenergies-2.png",
-      "/images/projects/sparkenergies-3.png",
-      "/images/projects/sparkenergies-4.png",
-      "/images/projects/sparkenergies-5.png",
     ],
     description:
-      "Utility billing and balance management engine built on a normalized 3NF relational schema. Implements double-entry ledger validation to prevent prepaid balance discrepancy, paired with monthly usage analytics. Stack: PHP, MySQL.",
-    sourceCodeHref: "https://github.com/sajedulislam5840/CSE370",
+      "Utility billing engine built on a normalized 3NF relational schema with ACID-compliant double-entry ledger validation.",
+    result: "Guarantees zero balance discrepancy under concurrent transactions.",
+    sourceCodeHref: "https://github.com/sajedulislam5840/sparkenergies-billing",
   },
   {
     name: "RISC-V Edge AI Acceleration",
@@ -73,34 +61,9 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
       "/images/projects/riscv-benchmark.png",
     ],
     description:
-      "Research prototype studying hardware-software co-design on RISC-V architectures. Analyzes custom instruction sets and low-precision quantized ML inference pipelines on resource-constrained compute nodes.",
+      "Research prototype benchmarking custom instruction set extensions and INT8 quantized matrix multiplication on a Spike simulator.",
+    result: "Analyzed compute-to-memory trade-offs for edge inferencing nodes.",
     sourceCodeHref: "https://github.com/sajedulislam5840/riscv-edge-ai",
-  },
-  {
-    name: "Retail Intelligence Engine",
-    category: "More Projects",
-    favicon: "",
-    imageUrl: [],
-    description:
-      "Multi-source ETL pipeline transforming transactional retail data into a Medallion data lake architecture (Raw to Silver to Gold) with automated data cleaning and aggregated reporting views. Stack: Python, SQL, Pandas.",
-    sourceCodeHref: "https://github.com/sajedulislam5840/amazon-sales-etl-pipeline",
-  },
-  {
-    name: "My Portfolio",
-    category: "More Projects",
-    favicon: "",
-    imageUrl: [
-      "/images/projects/portfolio-1.png",
-      "/images/projects/portfolio-2.png",
-      "/images/projects/portfolio-3.png",
-      "/images/projects/portfolio-4.png",
-      "/images/projects/portfolio-5.png",
-      "/images/projects/portfolio-6.png",
-    ],
-    description:
-      "Personal portfolio platform engineered with Next.js, React, and Tailwind CSS. Features dynamic project showcases, responsive image carousels, and automated Vercel CI/CD deployments. Stack: Next.js, TypeScript, Tailwind CSS.",
-    sourceCodeHref: "https://github.com/sajedulislam5840/portfolio",
-    liveWebsiteHref: "https://sajedul-islam-portfolio.vercel.app",
   },
 ];
 
@@ -108,8 +71,8 @@ export const PROJECT_SHOWCASE = [
   {
     index: 0,
     title: "AZS: The Catalyst",
-    href: "/projects",
-    tags: ["Next.js", "React", "EdTech", "Tailwind CSS"],
+    href: "https://azs-the-catalyst.vercel.app",
+    tags: ["Next.js", "React", "Live EdTech", "Tailwind CSS"],
     image: {
       LIGHT: "/images/projects/catalyst-hero.png",
       DARK: "/images/projects/catalyst-hero.png",
@@ -118,8 +81,8 @@ export const PROJECT_SHOWCASE = [
   {
     index: 1,
     title: "Career Switch Prediction",
-    href: "/projects",
-    tags: ["Machine Learning", "Scikit-Learn", "Stratified CV", "Python"],
+    href: "https://github.com/sajedulislam5840/career-switch-prediction",
+    tags: ["Machine Learning", "Stratified CV", "Python", "Scikit-Learn"],
     image: {
       LIGHT: "/images/projects/career-switch-1.png",
       DARK: "/images/projects/career-switch-1.png",
@@ -128,8 +91,8 @@ export const PROJECT_SHOWCASE = [
   {
     index: 2,
     title: "SparkEnergies Billing",
-    href: "/projects",
-    tags: ["Database Systems", "MySQL", "3NF Normalization", "PHP"],
+    href: "https://github.com/sajedulislam5840/sparkenergies-billing",
+    tags: ["3NF Schema", "Double-Entry Ledger", "MySQL", "PHP"],
     image: {
       LIGHT: "/images/projects/sparkenergies-1.png",
       DARK: "/images/projects/sparkenergies-1.png",
@@ -138,8 +101,8 @@ export const PROJECT_SHOWCASE = [
   {
     index: 3,
     title: "RISC-V Edge AI Acceleration",
-    href: "/projects",
-    tags: ["RISC-V", "Edge AI", "Computer Architecture", "Systems"],
+    href: "https://github.com/sajedulislam5840/riscv-edge-ai",
+    tags: ["Computer Architecture", "Quantized ML", "RISC-V", "Systems"],
     image: {
       LIGHT: "/images/projects/riscv-architecture.png",
       DARK: "/images/projects/riscv-architecture.png",

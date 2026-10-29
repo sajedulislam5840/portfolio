@@ -10,7 +10,7 @@
   siteRepo: "https://github.com/sajedulislam5840/portfolio",
   siteLogo: "/images/heroProfile.png",
   image: "/images/heroProfile.png",
-  socialBanner: "/images/heroProfile.png",
+  socialBanner: "/static/homepage.png",
   email: "mohammad.sajedul.islam@g.bracu.ac.bd",
   github: "https://github.com/sajedulislam5840",
   twitter: "",
