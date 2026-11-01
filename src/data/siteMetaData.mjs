@@ -14,8 +14,9 @@
   email: "mohammad.sajedul.islam@g.bracu.ac.bd",
   github: "https://github.com/sajedulislam5840",
   linkedin: "https://www.linkedin.com/in/sajedul-islam-data/",
-  fiverr: "https://www.fiverr.com",
+  fiverr: "https://www.fiverr.com/sellers/sajedulislam584/sellers/sajedulislam584",
   locale: "en-US",
 };
 
 export { siteMetadata };
+
