@@ -1,9 +1,9 @@
 ﻿const siteMetadata = {
-  title: "Mir Mohammad Sajedul Islam | Software Engineer",
+  title: "Sajedul Islam | Full-Stack, ML & Edge AI",
   author: "Mir Mohammad Sajedul Islam",
   headerTitle: "Sajedul Islam",
   description:
-    "CSE undergraduate at BRAC University building web platforms, machine learning models, and database systems with an interest in low-level systems execution. Seeking internship and junior engineering roles.",
+    "CSE undergraduate at BRAC University building full-stack platforms, ML pipelines, and RISC-V edge AI systems. Open to internships, research, and freelance work.",
   language: "en-us",
   theme: "system",
   siteUrl: "https://sajedul-islam-portfolio.vercel.app",
@@ -13,13 +13,9 @@
   socialBanner: "/static/homepage.png",
   email: "mohammad.sajedul.islam@g.bracu.ac.bd",
   github: "https://github.com/sajedulislam5840",
-  twitter: "",
-  facebook: "",
-  whatsapp: "",
-  youtube: "",
-  linkedin: "https://www.linkedin.com/in/sajedul-islam-data/-data/",
+  linkedin: "https://www.linkedin.com/in/sajedul-islam-data/",
+  fiverr: "https://www.fiverr.com",
   locale: "en-US",
 };
 
 export { siteMetadata };
-
